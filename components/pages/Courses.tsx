@@ -380,12 +380,12 @@ const Courses = () => {
         return course.class === 'JEE' && course.subject === 'jee'
       } else if (['mathematics', 'physics', 'chemistry'].includes(selectedSubject)) {
         // JEE + specific subject: Show Class 11 and 12 JEE courses for that subject
-        const subjectKeywords = {
+        const subjectKeywords: Record<string, string[]> = {
           'mathematics': ['mathematics', 'math'],
           'physics': ['physics'],
           'chemistry': ['chemistry']
         }
-        const keywords = subjectKeywords[selectedSubject] || []
+        const keywords = subjectKeywords[selectedSubject as keyof typeof subjectKeywords] || []
         return course.subject === 'jee' && ['11', '12'].includes(course.class) && 
                keywords.some(keyword => course.title.toLowerCase().includes(keyword))
       }
