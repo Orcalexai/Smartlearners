@@ -76,11 +76,11 @@ const Features = () => {
       title: 'JEE Preparation',
       description: '5,000+ JEE questions with solutions'
     },
-    {
-      icon: <FaCertificate className="text-3xl text-indigo-600" />,
-      title: 'Certificates',
-      description: 'Earn certificates on course completion'
-    },
+    // {
+    //   icon: <FaCertificate className="text-3xl text-indigo-600" />,
+    //   title: 'Certificates',
+    //   description: 'Earn certificates on course completion'
+    // },
     {
       icon: <FaLightbulb className="text-3xl text-yellow-600" />,
       title: 'Concept Clarity',
@@ -246,7 +246,7 @@ const Features = () => {
                 <p className="text-purple-100 mb-6">
                   Experience the power of AI-driven learning today
                 </p>
-                <Button variant="secondary" size="lg" href="https://app1.aieducator.com/">
+                <Button className='mx-auto' variant="secondary" size="lg" href="https://app1.aieducator.com/">
                   Start Free Trial
                 </Button>
               </Card>

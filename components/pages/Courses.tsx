@@ -418,7 +418,7 @@ const Courses = () => {
   
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-10 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -448,13 +448,13 @@ const Courses = () => {
         </div>
       </section>
       
-      <section className="py-12 bg-white sticky top-16 z-40 shadow-md">
+      <section className="pt-5 pb-2 bg-white sticky top-16 z-40 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              {/* <label className="block text-sm font-medium text-gray-700 mb-2">
                 Select Class
-              </label>
+              </label> */}
               <div className="flex flex-wrap gap-2">
                 {classes.map(cls => (
                   <button
@@ -473,9 +473,9 @@ const Courses = () => {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              {/* <label className="block text-sm font-medium text-gray-700 mb-2">
                 Select Subject
-              </label>
+              </label> */}
               <div className="flex flex-wrap gap-2">
                 {subjects.map(subject => (
                   <button
@@ -687,7 +687,7 @@ const Courses = () => {
           </div>
           
           <div className="text-center">
-            <Button size="lg" className="mr-4">
+            <Button size="lg" className="mr-4 my-2">
               <FaBell className="mr-2" />
               Join Waitlist
             </Button>

@@ -21,29 +21,29 @@ import { HiLightBulb, HiAcademicCap, HiSparkles } from 'react-icons/hi'
 const Home = () => {
   const features = [
     {
-      icon: <FaBrain className="text-4xl text-sky-600" />,
+      icon: <FaBrain className="text-4xl text-white" />,
       title: 'AI-Powered Learning',
       description: 'Advanced AI algorithms personalize your learning journey for maximum efficiency and engagement',
       color: 'from-sky-500 to-blue-600'
     },
     {
-      icon: <FaChartLine className="text-4xl text-blue-600" />,
+      icon: <FaChartLine className="text-4xl text-white" />,
       title: 'Smart Gap Analysis',
       description: 'Identify knowledge gaps instantly and get targeted content to improve weak areas',
       color: 'from-blue-500 to-indigo-600'
     },
     {
-      icon: <FaUserGraduate className="text-4xl text-indigo-600" />,
+      icon: <FaUserGraduate className="text-4xl text-white" />,
       title: 'CBSE NCERT Focus',
       description: 'Complete coverage of CBSE NCERT syllabus for Classes 6-12 with expert content',
       color: 'from-indigo-500 to-purple-600'
     },
-    {
-      icon: <FaCertificate className="text-4xl text-emerald-600" />,
-      title: 'Achievement Certificates',
-      description: 'Earn verified certificates on course completion to showcase your achievements',
-      color: 'from-emerald-500 to-teal-600'
-    }
+    // {
+    //   icon: <FaCertificate className="text-4xl text-white" />,
+    //   title: 'Achievement Certificates',
+    //   description: 'Earn verified certificates on course completion to showcase your achievements',
+    //   color: 'from-emerald-500 to-teal-600'
+    // }
   ]
   
   const stats = [
@@ -224,7 +224,7 @@ const Home = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card 
                 key={index}
@@ -237,7 +237,7 @@ const Home = () => {
                   className={`mb-6 p-4 bg-gradient-to-r ${feature.color} rounded-2xl w-fit mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300`}
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
-                  <div className="text-white">
+                  <div className="">
                     {feature.icon}
                   </div>
                 </motion.div>
@@ -324,11 +324,11 @@ const Home = () => {
                 <Card glass className="text-center p-8">
                   <motion.div
                     animate={{ 
-                      rotate: [0, 360],
-                      scale: [1, 1.1, 1]
+                      rotate: [0, 30],
+                      scale: [1, 1.2, 1]
                     }}
                     transition={{ 
-                      duration: 4,
+                      duration: 5,
                       repeat: Infinity,
                       ease: "linear"
                     }}
@@ -339,7 +339,7 @@ const Home = () => {
                   <p className="text-sky-100 mb-6 text-lg leading-relaxed text-rendering-fix">
                     Start your journey to academic success today
                   </p>
-                  <Button size="lg" icon={<HiSparkles />} href="https://app1.aieducator.com/">
+                  <Button size="lg" className='mx-auto' icon={<HiSparkles />} href="https://app1.aieducator.com/">
                     Get Started Now
                   </Button>
                 </Card>

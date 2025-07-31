@@ -287,13 +287,11 @@ const Terms = () => {
               For questions about these terms or our services, please contact us:
             </p>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="text-gray-700 mb-2"><strong>Email:</strong> legal@smartlearners.ai</p>
-              <p className="text-gray-700 mb-2"><strong>Phone:</strong> +91 123 456 7890</p>
-              <p className="text-gray-700 mb-4"><strong>Address:</strong> 123 Education Hub, Tech Park, Bangalore, India 560001</p>
+              <p className="text-gray-700 mb-2"><strong>Email:</strong> hello@smartlearners.ai</p>
+              <p className="text-gray-700 mb-2"><strong>Phone:</strong> +91 8008066228</p>
+              <p className="text-gray-700 mb-4"><strong>Address:</strong> Hyderabad, India 500016</p>
               
-              <h4 className="font-semibold text-gray-800 mb-2">Business Hours:</h4>
-              <p className="text-gray-700 mb-2">Monday - Friday: 9:00 AM - 6:00 PM IST</p>
-              <p className="text-gray-700">Saturday: 10:00 AM - 4:00 PM IST</p>
+           
             </div>
           </Card>
         </div>

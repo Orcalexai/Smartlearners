@@ -30,9 +30,9 @@ const Footer = () => {
       { name: 'JEE Preparation', path: '/courses' }
     ],
     support: [
-      { name: 'Help Center', path: '/help' },
+      // { name: 'Help Center', path: '/help' },
       { name: 'Contact Us', path: '/contact' },
-      { name: 'FAQs', path: '/faqs' },
+      // { name: 'FAQs', path: '/faqs' },
       { name: 'Terms & Conditions', path: '/terms' }
     ],
     resources: [
@@ -145,19 +145,19 @@ const Footer = () => {
               <li className="flex items-start">
                 <FaMapMarkerAlt className="mt-1 mr-3 text-sky-500 flex-shrink-0" />
                 <span className="text-gray-400 text-sm">
-                  123 Education Hub, Tech Park, Bangalore, India
+                  Hyderabad, India
                 </span>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="mr-3 text-sky-500 flex-shrink-0" />
-                <a href="mailto:info@smartlearners.ai" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  info@smartlearners.ai
+                <a href="mailto:hello@smartlearners.ai" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  hello@smartlearners.ai
                 </a>
               </li>
               <li className="flex items-center">
                 <FaPhone className="mr-3 text-sky-500 flex-shrink-0" />
-                <a href="tel:+911234567890" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  +91 123 456 7890
+                <a href="tel:+918008066228" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  +91 8008066228
                 </a>
               </li>
             </ul>
