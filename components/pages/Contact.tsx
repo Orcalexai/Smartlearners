@@ -53,7 +53,7 @@ const Contact = () => {
     {
       icon: <FaPhone className="text-2xl text-pink-600" />,
       title: 'Call Us',
-      details: '+91 98480 00000',
+      details: '+91 8008066228',
       description: 'Mon-Fri from 9am to 6pm'
     },
     {
