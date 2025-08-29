@@ -10,7 +10,6 @@ import {
   FaMapMarkerAlt, 
   FaClock,
   FaLinkedin,
-  FaTwitter,
   FaInstagram 
 } from 'react-icons/fa'
 
@@ -76,22 +75,22 @@ const Contact = () => {
       answer: 'Our AI tutor uses advanced machine learning algorithms to understand your learning patterns and provide personalized guidance, instant feedback, and adaptive questioning.'
     },
     {
-      question: 'Is the platform suitable for all CBSE classes?',
-      answer: 'Yes! We cover the complete CBSE NCERT syllabus for Classes 6-12 with subject-wise comprehensive content and practice materials.'
+      question: 'Can I use the platform on mobile?',
+      answer: 'Yes! Smart Learners.ai works seamlessly on desktops, tablets, and smartphones, so you can learn anytime, anywhere.'
     },
     {
       question: 'Can I track my progress?',
-      answer: 'Absolutely! Our learning analytics dashboard provides detailed insights into your performance, progress tracking, and personalized recommendations.'
+      answer: 'Yes! In addition to NCERT coverage, we provide advanced practice modules for Olympiads and foundation courses for competitive exams.'
     },
     {
-      question: 'What about JEE preparation?',
+      question: 'Do you provide practice beyond NCERT?',
       answer: 'We have a dedicated JEE preparation module with 5,000+ questions, detailed solutions, and targeted practice sessions aligned with JEE Main patterns.'
     }
   ]
   
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-12 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -110,7 +109,7 @@ const Contact = () => {
         </div>
       </section>
       
-      <section className="py-20">
+      <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => (
@@ -264,14 +263,6 @@ const Contact = () => {
                     rel="noopener noreferrer"
                   >
                     <FaLinkedin className="text-xl" />
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    className="p-3 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaTwitter className="text-xl" />
                   </a>
                   <a
                     href="https://instagram.com"

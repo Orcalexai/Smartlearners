@@ -52,7 +52,7 @@ const About = () => {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We're on a mission to transform education through AI-powered personalized 
-              learning, making quality education accessible to every student in India.
+              learning, making quality education accessible to every student in the world.
             </p>
           </motion.div>
         </div>
@@ -81,11 +81,7 @@ const About = () => {
                 By leveraging cutting-edge AI technology, we've built a system that provides 
                 personalized guidance, instant feedback, and targeted support.
               </p>
-              <p className="text-gray-600 mb-6">
-                Today, we're proud to serve over 50,000 students across India, helping them 
-                achieve their academic goals and build confidence in their abilities.
-              </p>
-              <Button>Join Our Journey</Button>
+              <Button href="/contact">Join Our Journey</Button>
             </motion.div>
             
             <motion.div

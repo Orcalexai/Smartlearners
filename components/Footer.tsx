@@ -24,10 +24,9 @@ const Footer = () => {
       { name: 'Our Team', path: '/about' }
     ],
     courses: [
-      { name: 'Class 6-8', path: '/courses' },
-      { name: 'Class 9-10', path: '/courses' },
-      { name: 'Class 11-12', path: '/courses' },
-      { name: 'JEE Preparation', path: '/courses' }
+      { name: 'NCERT 6–12', path: '/courses' },
+      { name: 'IIT Foundation 6–12', path: '/courses' },
+      { name: 'JEE Main & Advanced', path: '/courses' }
     ],
     support: [
       // { name: 'Help Center', path: '/help' },
@@ -44,8 +43,6 @@ const Footer = () => {
   }
   
   const socialLinks = [
-    { icon: <FaFacebook />, href: '#', label: 'Facebook' },
-    { icon: <FaTwitter />, href: '#', label: 'Twitter' },
     { icon: <FaLinkedin />, href: '#', label: 'LinkedIn' },
     { icon: <FaInstagram />, href: '#', label: 'Instagram' }
   ]
@@ -145,7 +142,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <FaMapMarkerAlt className="mt-1 mr-3 text-sky-500 flex-shrink-0" />
                 <span className="text-gray-400 text-sm">
-                  Hyderabad, India
+                  4th Floor, Veer Chambers, Prakash Nagar, Hyderabad-500016, India
                 </span>
               </li>
               <li className="flex items-center">

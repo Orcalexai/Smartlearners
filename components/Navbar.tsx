@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenu, HiX, HiSparkles } from 'react-icons/hi'
+import Image from 'next/image'
 import Button from './Button'
 
 const Navbar = () => {
@@ -44,24 +45,26 @@ const Navbar = () => {
     >
       <div className="container-max">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center space-x-3 group">
+          <Link href="/" className="flex items-center space-x-4 group">
             <motion.div 
-              className="relative w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg"
-              whileHover={{ scale: 1.1, rotate: 5 }}
+              className="relative w-16 h-16"
+              whileHover={{ scale: 1.08, rotate: 3 }}
               transition={{ duration: 0.3 }}
             >
-              <HiSparkles className="text-white text-xl" />
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-sky-500 to-blue-600 rounded-xl opacity-50 blur-md -z-10"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
+              <Image
+                src="/logo.jpg"
+                alt="Smart Learners.ai Logo"
+                width={64}
+                height={64}
+                className="object-contain"
+                priority
               />
             </motion.div>
             <div className="flex flex-col">
-              <span className="font-bold text-xl gradient-text group-hover:scale-105 transition-transform duration-300 text-rendering-fix">
+              <span className="font-bold text-2xl gradient-text group-hover:scale-105 transition-transform duration-300 text-rendering-fix">
                 Smart Learners.ai
               </span>
-              <span className="text-xs text-gray-500 -mt-1 text-rendering-fix">AI-Powered Learning</span>
+              <span className="text-sm text-gray-500 -mt-1 text-rendering-fix">AI-Powered Learning</span>
             </div>
           </Link>
           
@@ -97,7 +100,7 @@ const Navbar = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              <Button size="sm" icon={<HiSparkles />} href="https://app1.aieducator.com/">
+              <Button size="sm" icon={<HiSparkles />} href="/contact">
                 Get Started
               </Button>
             </motion.div>
@@ -154,7 +157,7 @@ const Navbar = () => {
                 transition={{ delay: 0.6, duration: 0.3 }}
                 className="pt-4"
               >
-                <Button className="w-full" size="md" icon={<HiSparkles />} href="https://app1.aieducator.com/">
+                <Button className="w-full" size="md" icon={<HiSparkles />} href="/contact">
                   Get Started
                 </Button>
               </motion.div>

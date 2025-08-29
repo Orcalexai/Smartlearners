@@ -31,7 +31,7 @@ const Refund = () => {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-gradient-to-br from-red-50 to-yellow-50">
+      <section className="py-12 bg-gradient-to-br from-red-50 to-yellow-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -43,16 +43,16 @@ const Refund = () => {
               Refund <span className="gradient-text">Policy</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Smart Learners.ai operates under a strict No Refund policy. By purchasing any of our services or subscriptions, you agree that all sales are final and no returns or refunds will be provided under any circumstances.
+              At <b>Smart Learners.ai (Orcalex Technologies)</b>, we strive to provide high-quality digital learning experiences. Since our services include <b>instant access to digital content and personalized AI-driven tools</b>, we operate under a <b>non-refundable digital services policy</b>.
             </p>
             <p className="text-sm text-gray-500">Last updated: July 31, 2025</p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
             {policies.map((policy, index) => (
               <motion.div
                 key={index}
@@ -76,7 +76,7 @@ const Refund = () => {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-4">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Important Notice</h2>
@@ -108,9 +108,8 @@ const Refund = () => {
             </p>
 
             <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="text-gray-700 mb-2"><strong>Support Email:</strong> support@smartlearners.ai</p>
-              <p className="text-gray-700 mb-2"><strong>Phone:</strong> +91 123 456 7890</p>
-              <p className="text-gray-700 mb-2"><strong>Live Chat:</strong> Available on our website</p>
+              <p className="text-gray-700 mb-2"><strong>Support Email:</strong> hello@smartlearners.ai</p>
+              <p className="text-gray-700 mb-2"><strong>Phone:</strong> +91 8008066228</p>
 
               <h4 className="font-semibold text-gray-800 mt-4 mb-2">Support Hours:</h4>
               <p className="text-gray-700 mb-2">Monday - Friday: 9:00 AM - 6:00 PM IST</p>

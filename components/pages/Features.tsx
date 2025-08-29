@@ -8,99 +8,133 @@ import {
   FaBrain, 
   FaChartLine, 
   FaRobot, 
-  FaCertificate, 
   FaBookOpen, 
   FaUserGraduate,
   FaLightbulb,
-  FaCrosshairs,
-  FaMobile,
-  FaCloud
+  FaCheckCircle,
+  FaSyncAlt,
+  FaSchool,
+  FaClipboardCheck,
+  FaFileAlt,
+  FaComments
 } from 'react-icons/fa'
 
 const Features = () => {
   const mainFeatures = [
     {
-      icon: <FaBrain className="text-5xl text-purple-600" />,
-      title: 'AI-Powered Tutoring',
-      description: 'Get personalized guidance from our AI tutor that adapts to your learning style and pace.',
+      icon: <span className="text-5xl">🤖</span>,
+      title: 'Auto-Correct',
+      description: 'Upload your answer and get instant AI-powered scoring and insights.',
       details: [
-        'Instant doubt resolution',
-        'Adaptive questioning',
-        'Personalized explanations',
-        '24/7 availability'
+        'Instant score',
+        'Mistake type: Calculation / Conceptual',
+        'Concepts required explained',
+        'Immediate feedback loop'
       ]
     },
     {
-      icon: <FaChartLine className="text-5xl text-pink-600" />,
-      title: 'Learning Analytics',
-      description: 'Track your progress with detailed analytics and insights into your learning patterns.',
+      icon: <span className="text-5xl">🏫</span>,
+      title: 'Classwork & Homework',
+      description: 'Assign, attempt, and track classwork and homework seamlessly.',
       details: [
-        'Performance tracking',
-        'Weakness identification',
-        'Progress visualization',
-        'Learning recommendations'
+        'Teachers assign from app or upload',
+        'Students attempt directly or upload answers',
+        'Notifications for pending work',
+        'Easy submission tracking'
       ]
     },
     {
-      icon: <FaCrosshairs className="text-5xl text-indigo-600" />,
-      title: 'Gap Analysis',
-      description: 'Identify knowledge gaps and get targeted content to strengthen your weak areas.',
+      icon: <span className="text-5xl">📘</span>,
+      title: 'Worksheets (Custom Questions)',
+      description: 'Create and attempt your own sets of questions tailored to your practice needs.',
       details: [
-        'Skill gap identification',
-        'Targeted practice',
-        'Adaptive content delivery',
-        'Remedial learning paths'
+        'practice from custom worksheets',
+        'Attempt teacher-assigned sets',
+        'Practice focused topics',
+        'Save & reuse worksheets'
       ]
     },
     {
-      icon: <FaRobot className="text-5xl text-purple-600" />,
-      title: 'Smart Answer Correction',
-      description: 'Get instant feedback on your answers with AI-powered correction and suggestions.',
+      icon: <span className="text-5xl">📄</span>,
+      title: 'Answer-Sheet Correction (HW & CW)',
+      description: 'Scan or upload written work for AI + teacher review.',
       details: [
-        'Instant feedback',
-        'Step-by-step solutions',
-        'Alternative approaches',
-        'Error pattern analysis'
+        'Auto-score with AI',
+        'Mistake detection & categorization',
+        'Teacher manual override option',
+        'Faster grading and feedback'
+      ]
+    },
+    {
+      icon: <span className="text-5xl">📊</span>,
+      title: 'Performance Analysis',
+      description: 'Track your learning journey with in-depth insights.',
+      details: [
+        'Chapter-wise accuracy',
+        'Date-wise progress tracking',
+        'Time spent trends',
+        'Strengths & weaknesses overview'
+      ]
+    },
+    {
+      icon: <span className="text-5xl">💬</span>,
+      title: 'Student Chatbot',
+      description: 'Your personal study companion — ask, learn, and track your progress.',
+      details: [
+        'Ask for weak chapters',
+        'Get past test performance',
+        'Request any solution instantly',
+        'Available 24/7 for guidance'
       ]
     }
+    
+    
+    
   ]
   
   const additionalFeatures = [
     {
-      icon: <FaBookOpen className="text-3xl text-purple-600" />,
-      title: 'Complete NCERT Coverage',
-      description: 'Full CBSE syllabus for Classes 6-12'
+      icon: <span className="text-3xl">🧩</span>,
+      title: 'Solve (Step-by-Step)',
+      description: 'Understand solutions at your own pace with guided reveal-by-step learning.',
+      details: [
+        'Stepwise breakdown of answers',
+        'Reveal next step when ready',
+        'Clear explanations for each step',
+        'Supports self-paced learning'
+      ]
     },
     {
-      icon: <FaUserGraduate className="text-3xl text-pink-600" />,
-      title: 'JEE Preparation',
-      description: '5,000+ JEE questions with solutions'
-    },
-    // {
-    //   icon: <FaCertificate className="text-3xl text-indigo-600" />,
-    //   title: 'Certificates',
-    //   description: 'Earn certificates on course completion'
-    // },
-    {
-      icon: <FaLightbulb className="text-3xl text-yellow-600" />,
-      title: 'Concept Clarity',
-      description: 'Visual explanations for complex topics'
+      icon: <span className="text-3xl">📚</span>,
+      title: 'Concepts Required (in Solution)',
+      description: 'Know the exact concepts behind every solution to strengthen fundamentals.',
+      details: [
+        'Lists all concepts used',
+        'Highlights prerequisite knowledge',
+        'Links to related topics',
+        'Helps in targeted revision'
+      ]
     },
     {
-      icon: <FaMobile className="text-3xl text-green-600" />,
-      title: 'Mobile Friendly',
-      description: 'Learn anywhere, anytime on any device'
-    },
-    {
-      icon: <FaCloud className="text-3xl text-blue-600" />,
-      title: 'Cloud Sync',
-      description: 'Your progress syncs across all devices'
+      icon: <span className="text-3xl">🔄</span>,
+      title: 'Similar Questions',
+      description: 'From any solution, click "Similar Questions" to practice variants instantly.',
+      details: [
+        'Auto-generate related problems',
+        'Reinforce the same concept',
+        'Increase mastery with practice',
+        'Improve exam readiness'
+      ]
     }
+    
+    
+    
+    
   ]
   
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-12 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -113,13 +147,13 @@ const Features = () => {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover the advanced AI-powered features that make Smart Learners.ai 
-              the most effective learning platform for CBSE students.
+              the most effective learning platform for students.
             </p>
           </motion.div>
         </div>
       </section>
       
-      <section className="py-20">
+      <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {mainFeatures.map((feature, index) => (
@@ -159,7 +193,7 @@ const Features = () => {
         </div>
       </section>
       
-      <section className="py-20 bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
@@ -185,72 +219,27 @@ const Features = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                <Card hover className="text-center h-full">
-                  <div className="mb-4 p-3 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl w-fit mx-auto">
-                    {feature.icon}
+                <Card hover className="h-full">
+                  <div className="text-center mb-4">
+                    <div className="mb-4 p-3 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl w-fit mx-auto">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">{feature.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <ul className="space-y-2 text-left">
+                    {feature.details.map((detail, idx) => (
+                      <li key={idx} className="flex items-center text-gray-700">
+                        <div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
                 </Card>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-      
-      <section className="py-20 bg-gradient-to-br from-purple-600 to-indigo-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold mb-6">
-                Experience the Future of Learning
-              </h2>
-              <p className="text-xl text-purple-100 mb-8">
-                Our AI-powered platform doesn't just teach - it understands how you learn 
-                and adapts to help you succeed. Join thousands of students who are already 
-                experiencing the benefits of personalized education.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Proven 95% score improvement rate</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Trusted by 10,000+ students</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Complete CBSE NCERT coverage</span>
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <Card glass className="p-8">
-                <FaBrain className="text-8xl text-white mx-auto mb-6" />
-                <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-                <p className="text-purple-100 mb-6">
-                  Experience the power of AI-driven learning today
-                </p>
-                <Button className='mx-auto' variant="secondary" size="lg" href="https://app1.aieducator.com/">
-                  Start Free Trial
-                </Button>
-              </Card>
-            </motion.div>
           </div>
         </div>
       </section>

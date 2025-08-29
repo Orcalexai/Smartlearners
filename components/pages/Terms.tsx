@@ -31,7 +31,7 @@ const Terms = () => {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -43,8 +43,8 @@ const Terms = () => {
               Terms & <span className="gradient-text">Conditions</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Please read these terms and conditions carefully before using Smart Learners.ai. 
-              By accessing or using our platform, you agree to be bound by these terms.
+              Please read these Terms and conditions carefully before using Smart Learners.ai. 
+              By accessing or using our platform, you agree to be bound by these Terms. If you do not agree, you may not use the Platform.
             </p>
             <p className="text-sm text-gray-500">
               Last updated: December 20, 2024
@@ -53,9 +53,9 @@ const Terms = () => {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
             {highlights.map((highlight, index) => (
               <motion.div
                 key={index}
@@ -79,20 +79,13 @@ const Terms = () => {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-4">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">1. Acceptance of Terms</h2>
-            
-            <p className="text-gray-600 mb-4">
-              By accessing and using Smart Learners.ai ("the Platform"), you accept and agree to be bound 
-              by the terms and provision of this agreement. If you do not agree to abide by the above, 
-              please do not use this service.
-            </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">1. Legal Agreement</h2>
             
             <p className="text-gray-600 mb-8">
-              These terms apply to all users of the Platform, including without limitation users who are 
-              students, parents, educators, contributors of content, and/or general browsers of the Platform.
+              These Terms constitute a binding legal agreement between you and Smart Learners.ai(Orcalex Technologies).
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">2. Description of Service</h2>
@@ -101,153 +94,136 @@ const Terms = () => {
               Smart Learners.ai provides an AI-powered educational platform offering:
             </p>
             <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Personalized learning experiences for CBSE NCERT curriculum</li>
-              <li>• AI-driven tutoring and assessment tools</li>
+              <li>• Personalized learning experiences</li>
+              <li>• AI-driven tutoring and assessments</li>
               <li>• Progress tracking and analytics</li>
-              <li>• Interactive courses for Classes 6-12</li>
-              <li>• JEE preparation materials and practice tests</li>
-              <li>• Achievement certificates and performance reports</li>
+              <li>• Interactive courses for Classes 6–12</li>
+              <li>• JEE preparation materials and tests</li>
+              <li>• Certificates and performance reports</li>
             </ul>
 
             <p className="text-gray-600 mb-8">
-              The Platform is provided "as is" and we reserve the right to modify, suspend, or discontinue 
-              any aspect of the service at any time without notice.
+              The Platform is provided "as is," and we may modify, suspend, or discontinue any aspect of the service at our discretion.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">3. User Registration and Accounts</h2>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Account Creation</h3>
             <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Users must provide accurate and complete information during registration</li>
-              <li>• You are responsible for maintaining the confidentiality of your account credentials</li>
-              <li>• One account per user - multiple accounts are not permitted</li>
-              <li>• Users under 18 must have parental consent to create an account</li>
+              <li>• Users must provide accurate and complete information during registration.</li>
+              <li>• One account per user is allowed.</li>
+              <li>• Users under 18 may only register with verifiable parental or guardian consent, in compliance with India's DPDP Act, 2023.</li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Account Security</h3>
             <ul className="text-gray-600 mb-8 space-y-2">
-              <li>• You are solely responsible for all activities under your account</li>
-              <li>• Notify us immediately of any unauthorized use of your account</li>
-              <li>• We are not liable for any loss or damage from unauthorized account access</li>
-              <li>• Strong passwords and regular updates are recommended</li>
+              <li>• You are responsible for maintaining the confidentiality of your credentials.</li>
+              <li>• Notify us immediately of unauthorized use of your account.</li>
+              <li>• Strong passwords and regular updates are recommended.</li>
+              <li>• We are not liable for damages from unauthorized account access.</li>
             </ul>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">4. Acceptable Use Policy</h2>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Permitted Uses</h3>
             <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Access educational content for personal learning purposes</li>
-              <li>• Complete courses and assessments honestly</li>
-              <li>• Interact respectfully with AI tutors and platform features</li>
-              <li>• Provide feedback to help improve the platform</li>
+              <li>• Access and use content for personal learning.</li>
+              <li>• Complete assignments honestly.</li>
+              <li>• Interact respectfully with AI tutors and peers.</li>
+              <li>• Provide constructive feedback.</li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Prohibited Activities</h3>
             <p className="text-gray-600 mb-4">You agree not to:</p>
             <ul className="text-gray-600 mb-8 space-y-2">
-              <li>• Share account credentials with others</li>
-              <li>• Copy, distribute, or modify platform content without permission</li>
-              <li>• Attempt to reverse engineer or hack the platform</li>
-              <li>• Use automated tools to access or scrape the platform</li>
-              <li>• Submit false information or cheat on assessments</li>
-              <li>• Violate any applicable laws or regulations</li>
-              <li>• Harass, abuse, or harm other users</li>
-              <li>• Upload malicious content or viruses</li>
+              <li>• Share accounts or login credentials.</li>
+              <li>• Copy, distribute, or modify content without permission.</li>
+              <li>• Reverse engineer or hack the platform.</li>
+              <li>• Submit false information or cheat on assessments.</li>
+              <li>• Use bots, scripts, or scraping tools.</li>
+              <li>• Upload viruses, malicious code, or harmful content.</li>
+              <li>• Harass or harm other users.</li>
+              <li>• Violate laws or regulations.</li>
             </ul>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">5. Subscription and Payment Terms</h2>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Subscription Plans</h3>
             <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Free tier with limited access to basic features</li>
-              <li>• Premium subscriptions with full platform access</li>
-              <li>• Annual and monthly billing options available</li>
-              <li>• Institutional and bulk pricing for schools</li>
+              <li>• Free plan with limited access.</li>
+              <li>• Premium subscriptions with full access.</li>
+              <li>• Annual and monthly billing options.</li>
+              <li>• Institutional/bulk pricing available.</li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Payment Processing</h3>
             <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• All payments are processed securely through our payment partners</li>
-              <li>• Subscription fees are charged in advance</li>
-              <li>• Failed payments may result in service suspension</li>
-              <li>• Price changes will be communicated 30 days in advance</li>
+              <li>• All payments are processed securely by third-party providers (e.g., Razorpay, Stripe).</li>
+              <li>• We do not store credit/debit card details.</li>
+              <li>• Fees are charged in advance.</li>
+              <li>• Failed payments may result in suspension.</li>
             </ul>
+
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Refunds</h3>
+            <p className="text-gray-600 mb-6">
+              Payments are non-refundable, except where required by law. If you cancel, you will continue to have access until the end of your billing cycle.
+            </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Auto-Renewal</h3>
             <p className="text-gray-600 mb-8">
-              Subscriptions automatically renew unless cancelled before the renewal date. 
-              You can cancel your subscription at any time through your account settings.
+              Subscriptions renew automatically unless cancelled before the renewal date. Price changes will be notified 30 days in advance.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">6. Intellectual Property Rights</h2>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Content</h3>
-            <p className="text-gray-600 mb-4">
-              All content on Smart Learners.ai, including but not limited to:
-            </p>
-            <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Course materials, videos, and text content</li>
-              <li>• AI algorithms and learning models</li>
-              <li>• Software, code, and platform technology</li>
-              <li>• Trademarks, logos, and brand elements</li>
-              <li>• Design, layout, and user interface</li>
-            </ul>
             <p className="text-gray-600 mb-6">
-              is owned by Smart Learners.ai and protected by copyright, trademark, and other intellectual property laws.
+              All content, software, AI algorithms, design, trademarks, and technology are the property of Smart Learners.ai and protected by applicable laws.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">User-Generated Content</h3>
             <p className="text-gray-600 mb-8">
-              By submitting content to our platform (responses, feedback, etc.), you grant us a 
-              non-exclusive, worldwide, royalty-free license to use, modify, and display such content 
-              for the purpose of providing and improving our services.
+              By submitting content (answers, feedback, uploads), you grant Smart Learners.ai a non-exclusive, royalty-free, worldwide license to use, display, and improve services. We reserve the right to moderate, remove, or edit user content that violates these Terms.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">7. Privacy and Data Protection</h2>
             
-            <p className="text-gray-600 mb-4">
-              Your privacy is important to us. Our Privacy Policy explains:
+            <p className="text-gray-600 mb-8">
+              Your privacy is important to us. Our Privacy Policy explains what information we collect, how we use it, and your rights. We comply with the Digital Personal Data Protection Act, 2023 (India) and, where applicable, the GDPR for international users.
             </p>
-            <ul className="text-gray-600 mb-8 space-y-2">
-              <li>• What information we collect and why</li>
-              <li>• How we use and protect your data</li>
-              <li>• Your rights regarding your personal information</li>
-              <li>• How to contact us about privacy concerns</li>
-            </ul>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">8. Disclaimers and Limitations</h2>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Educational Disclaimer</h3>
             <p className="text-gray-600 mb-6">
-              Smart Learners.ai is a supplementary educational tool. While we strive for accuracy, 
-              we do not guarantee that our content is error-free or that use of our platform will 
-              result in specific academic outcomes. Traditional study methods and qualified teachers 
-              remain important for comprehensive education.
+              Smart Learners.ai is a supplementary tool. While we strive for accuracy, we do not guarantee specific academic outcomes. Traditional study methods and qualified teachers remain essential.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Service Availability</h3>
             <p className="text-gray-600 mb-6">
-              We aim for 99.9% uptime but cannot guarantee uninterrupted service. We may experience 
-              downtime for maintenance, updates, or due to factors beyond our control.
+              We target 99.9% uptime but do not guarantee uninterrupted access. We are not responsible for delays or interruptions caused by force majeure events (e.g., natural disasters, government actions, internet outages).
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Limitation of Liability</h3>
             <p className="text-gray-600 mb-8">
-              Smart Learners.ai shall not be liable for any indirect, incidental, special, 
-              consequential, or punitive damages, including without limitation, loss of profits, 
-              data, use, goodwill, or other intangible losses resulting from your use of the platform.
+              We are not liable for indirect, incidental, or consequential damages including loss of profits, data, goodwill, or learning outcomes.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">9. Termination</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">9. Indemnity</h2>
+            
+            <p className="text-gray-600 mb-8">
+              You agree to indemnify and hold harmless Smart Learners.ai, its affiliates, and employees from claims, damages, or expenses arising from your misuse of the Platform or violation of these Terms.
+            </p>
+
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">10. Termination</h2>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">By You</h3>
             <p className="text-gray-600 mb-4">
               You may terminate your account at any time by:
             </p>
             <ul className="text-gray-600 mb-6 space-y-2">
+              <li>• Using account deletion settings</li>
               <li>• Contacting our support team</li>
-              <li>• Using the account deletion feature in settings</li>
-              <li>• Canceling your subscription (service ends at period end)</li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">By Us</h3>
@@ -255,43 +231,38 @@ const Terms = () => {
               We may suspend or terminate your account if:
             </p>
             <ul className="text-gray-600 mb-8 space-y-2">
-              <li>• You violate these terms of service</li>
-              <li>• You engage in fraudulent or illegal activities</li>
-              <li>• Your account remains inactive for an extended period</li>
-              <li>• We discontinue the service (with reasonable notice)</li>
+              <li>• Terms are violated.</li>
+              <li>• Fraudulent activity is detected.</li>
+              <li>• The account remains inactive for long periods.</li>
+              <li>• The service is discontinued (with reasonable notice).</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">10. Governing Law and Disputes</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">11. Governing Law and Disputes</h2>
             
             <p className="text-gray-600 mb-4">
-              These terms are governed by the laws of India. Any disputes will be subject to the 
-              exclusive jurisdiction of the courts in Bangalore, Karnataka, India.
+              These Terms are governed by the laws of India. Disputes shall fall under the jurisdiction of courts in Bangalore, Karnataka, India.
             </p>
             
             <p className="text-gray-600 mb-8">
-              We encourage resolving disputes through direct communication. If formal proceedings 
-              are necessary, both parties agree to attempt mediation before litigation.
+              Before litigation, both parties agree to attempt resolution through mediation or arbitration under the Arbitration and Conciliation Act, 1996.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">11. Changes to Terms</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">12. Changes to Terms</h2>
             
             <p className="text-gray-600 mb-8">
-              We reserve the right to modify these terms at any time. Material changes will be 
-              communicated via email or platform notification at least 30 days before taking effect. 
-              Continued use of the platform after changes constitutes acceptance of the new terms.
+              We may update these Terms from time to time. Material changes will be communicated by email or platform notification at least 30 days before effect. Continued use after changes implies acceptance.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">12. Contact Information</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">13. Contact Information</h2>
             
             <p className="text-gray-600 mb-4">
-              For questions about these terms or our services, please contact us:
+              For any questions about these Terms, contact us:
             </p>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="text-gray-700 mb-2"><strong>Email:</strong> hello@smartlearners.ai</p>
-              <p className="text-gray-700 mb-2"><strong>Phone:</strong> +91 8008066228</p>
-              <p className="text-gray-700 mb-4"><strong>Address:</strong> Hyderabad, India 500016</p>
-              
-           
+              <p className="text-gray-700 mb-2">📧 <strong>Email:</strong> hello@smartlearners.ai</p>
+              <p className="text-gray-700 mb-2">📞 <strong>Phone:</strong> +91 8008066228</p>
+              <p className="text-gray-700 mb-2">🏢 <strong>Address:</strong> 4th Floor, Veer Chambers, Prakash Nagar, Hyderabad-500016, India</p>
+              <p className="text-gray-700 mb-4">🕑 <strong>Support Hours:</strong> Mon–Sat, 9:00 AM – 6:00 PM IST</p>
             </div>
           </Card>
         </div>

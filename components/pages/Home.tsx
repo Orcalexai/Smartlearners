@@ -21,36 +21,30 @@ import { HiLightBulb, HiAcademicCap, HiSparkles } from 'react-icons/hi'
 const Home = () => {
   const features = [
     {
-      icon: <FaBrain className="text-4xl text-white" />,
-      title: 'AI-Powered Learning',
-      description: 'Advanced AI algorithms personalize your learning journey for maximum efficiency and engagement',
+      icon: <FaBookOpen className="text-4xl text-white" />,
+      title: 'Comprehensive Curriculum Coverage',
+      description: 'Complete learning for NCERT 6–12, IIT Foundation, and JEE Main & Advanced – all in one app.',
       color: 'from-sky-500 to-blue-600'
     },
     {
-      icon: <FaChartLine className="text-4xl text-white" />,
-      title: 'Smart Gap Analysis',
-      description: 'Identify knowledge gaps instantly and get targeted content to improve weak areas',
+      icon: <FaBrain className="text-4xl text-white" />,
+      title: 'AI-Powered Learning',
+      description: 'Advanced AI algorithms personalize your learning journey for maximum efficiency and engagement',
       color: 'from-blue-500 to-indigo-600'
     },
     {
-      icon: <FaUserGraduate className="text-4xl text-white" />,
-      title: 'CBSE NCERT Focus',
-      description: 'Complete coverage of CBSE NCERT syllabus for Classes 6-12 with expert content',
+      icon: <FaChartLine className="text-4xl text-white" />,
+      title: 'Smart Performance Analysis',
+      description: 'From homework to classwork, track student progress with detailed class and individual reports.',
       color: 'from-indigo-500 to-purple-600'
-    },
-    // {
-    //   icon: <FaCertificate className="text-4xl text-white" />,
-    //   title: 'Achievement Certificates',
-    //   description: 'Earn verified certificates on course completion to showcase your achievements',
-    //   color: 'from-emerald-500 to-teal-600'
-    // }
+    }
   ]
   
   const stats = [
-    { number: '10,000+', label: 'CBSE Students', icon: <FaUserGraduate /> },
+    { number: '5,000+', label: 'CBSE Students', icon: <FaUserGraduate /> },
     { number: '10,000+', label: 'NCERT Questions', icon: <FaBookOpen /> },
-    { number: '95%', label: 'Score Improvement', icon: <FaChartLine /> },
-    { number: '5,000+', label: 'JEE Questions', icon: <FaBrain /> }
+    { number: '90%', label: 'Score Improvement', icon: <FaChartLine /> },
+    { number: '20,000+', label: 'JEE Questions', icon: <FaBrain /> }
   ]
   
   const containerVariants = {
@@ -79,7 +73,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-32 overflow-hidden">
+      <section className="relative pt-24 pb-12 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50"></div>
@@ -133,8 +127,8 @@ const Home = () => {
               className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 text-shadow text-rendering-fix leading-tight"
               variants={itemVariants}
             >
-              Master <span className="gradient-text">CBSE NCERT</span><br />
-              <span className="text-4xl md:text-6xl">with AI-Powered Learning</span>
+              <span className="gradient-text">The No.1 Educational App in the World</span><br />
+              <span className="text-4xl md:text-6xl">All-in-One Learning Platform</span>
             </motion.h1>
             
             <motion.p 
@@ -149,30 +143,11 @@ const Home = () => {
               className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
               variants={itemVariants}
             >
-              <Button size="xl" icon={<FaPlay />} href="https://app1.aieducator.com/">
-                Start Learning Free
-              </Button>
-              <Button variant="secondary" size="xl" icon={<FaArrowRight />} href="https://app1.aieducator.com/">
+              <Button variant="secondary" size="xl" icon={<FaArrowRight />} href="/contact">
                 Watch Demo
               </Button>
             </motion.div>
             
-            <motion.div 
-              className="flex justify-center items-center space-x-3 text-yellow-400 mb-16"
-              variants={itemVariants}
-            >
-              {[...Array(5)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1 + i * 0.1, duration: 0.3 }}
-                >
-                  <FaStar className="text-2xl" />
-                </motion.div>
-              ))}
-              <span className="ml-3 text-gray-600 font-medium text-rendering-fix">Rated 4.9/5 by 10,000+ students</span>
-            </motion.div>
           </div>
           
           {/* Stats Cards */}
@@ -206,10 +181,10 @@ const Home = () => {
       </section>
       
       {/* Features Section */}
-      <section className="section-padding bg-white">
+      <section className="pt-8 pb-16 bg-white">
         <div className="container-max">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -246,108 +221,23 @@ const Home = () => {
               </Card>
             ))}
           </div>
+          
+          <motion.div 
+            className="flex justify-center mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            <Link href="/features">
+              <Button variant="primary" size="lg" icon={<FaArrowRight />}>
+                Explore All Features
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
       
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-sky-600 via-blue-700 to-indigo-800 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh opacity-20"></div>
-        <motion.div 
-          className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20"
-          animate={{ 
-            scale: [1, 1.5, 1],
-            x: [0, 100, 0],
-          }}
-          transition={{ 
-            duration: 10,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
-        <div className="container-max relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-rendering-fix leading-tight">
-                Transform Your Learning Journey
-              </h2>
-              <p className="text-xl text-sky-100 mb-8 leading-relaxed text-rendering-fix">
-                Join thousands of students who have improved their academic performance 
-                with our AI-powered learning platform. Experience the future of education today.
-              </p>
-              <div className="space-y-4">
-                {[
-                  { icon: <HiLightBulb />, title: 'Smart Answer Correction', desc: 'Get instant feedback with AI-powered evaluation' },
-                  { icon: <FaRocket />, title: 'Adaptive Learning Path', desc: 'Personalized curriculum that adapts to your pace' },
-                  { icon: <HiAcademicCap />, title: 'Comprehensive Coverage', desc: 'Complete CBSE NCERT syllabus with JEE prep' }
-                ].map((item, index) => (
-                  <motion.div 
-                    key={index}
-                    className="flex items-start space-x-4"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                  >
-                    <div className="text-2xl text-yellow-400 flex-shrink-0 mt-1">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1 text-rendering-fix">{item.title}</h3>
-                      <p className="text-sky-100 text-rendering-fix leading-relaxed">{item.desc}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="mt-8">
-                <Link href="/features">
-                  <Button variant="secondary" size="lg" icon={<FaArrowRight />}>
-                    Explore All Features
-                  </Button>
-                </Link>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="relative"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <div className="relative">
-                <Card glass className="text-center p-8">
-                  <motion.div
-                    animate={{ 
-                      rotate: [0, 30],
-                      scale: [1, 1.2, 1]
-                    }}
-                    transition={{ 
-                      duration: 5,
-                      repeat: Infinity,
-                      ease: "linear"
-                    }}
-                  >
-                    <FaBookOpen className="text-8xl text-white mx-auto mb-6" />
-                  </motion.div>
-                  <h3 className="text-2xl font-bold mb-4 text-rendering-fix">Ready to Excel?</h3>
-                  <p className="text-sky-100 mb-6 text-lg leading-relaxed text-rendering-fix">
-                    Start your journey to academic success today
-                  </p>
-                  <Button size="lg" className='mx-auto' icon={<HiSparkles />} href="https://app1.aieducator.com/">
-                    Get Started Now
-                  </Button>
-                </Card>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
       
       {/* Final CTA Section */}
       <section className="section-padding bg-gray-50">
@@ -366,9 +256,6 @@ const Home = () => {
               AI-powered personalized learning that adapts to your unique needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="xl" icon={<HiSparkles />} href="https://app1.aieducator.com/">
-                Start Free Trial
-              </Button>
               <Link href="/contact">
                 <Button variant="outline" size="xl" icon={<FaArrowRight />}>
                   Contact Us

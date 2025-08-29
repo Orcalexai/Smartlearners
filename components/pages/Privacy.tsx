@@ -31,7 +31,7 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -42,10 +42,9 @@ const Privacy = () => {
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Privacy <span className="gradient-text">Policy</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               At Smart Learners.ai, we are committed to protecting your privacy and ensuring 
-              the security of your personal information. This policy explains how we collect, 
-              use, and safeguard your data.
+              the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data, in compliance with applicable data protection laws including the Digital Personal Data Protection Act, 2023 (India) and, where relevant, the General Data Protection Regulation (GDPR - EU/EEA users).
             </p>
             <p className="text-sm text-gray-500">
               Last updated: December 20, 2024
@@ -54,9 +53,9 @@ const Privacy = () => {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-2">
             {principles.map((principle, index) => (
               <motion.div
                 key={index}
@@ -80,173 +79,148 @@ const Privacy = () => {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-2">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">1. Information We Collect</h2>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Personal Information</h3>
             <p className="text-gray-600 mb-4">
-              When you register for Smart Learners.ai, we collect information such as:
+              When you register or use our services, we may collect:
             </p>
             <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Full name and contact information</li>
-              <li>• Email address and phone number</li>
+              <li>• Full name and contact details (email, phone number)</li>
               <li>• Educational background and class level</li>
-              <li>• Parent/guardian contact information (for minors)</li>
-              <li>• Payment information for premium services</li>
+              <li>• Parent/guardian details (for minors)</li>
+              <li>• Payment information (processed securely by trusted third-party providers; we do not store credit/debit card details)</li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Learning Data</h3>
             <p className="text-gray-600 mb-4">
-              To provide personalized learning experiences, we collect:
+              To provide personalized learning, we collect:
             </p>
             <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Course progress and completion status</li>
+              <li>• Course progress and completion records</li>
               <li>• Quiz and test results</li>
-              <li>• Time spent on different topics</li>
-              <li>• Learning preferences and patterns</li>
-              <li>• AI interaction logs for improvement</li>
+              <li>• Time spent on topics</li>
+              <li>• Learning preferences and interaction logs</li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Technical Information</h3>
             <p className="text-gray-600 mb-4">
-              We automatically collect certain technical information:
+              We automatically collect:
             </p>
             <ul className="text-gray-600 mb-8 space-y-2">
-              <li>• IP address and location data</li>
-              <li>• Device type and operating system</li>
-              <li>• Browser information and preferences</li>
-              <li>• Usage patterns and platform interactions</li>
+              <li>• IP address and approximate location</li>
+              <li>• Device type, operating system, and browser information</li>
+              <li>• Platform usage patterns</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">2. How We Use Your Information</h2>
+            
+            <p className="text-gray-600 mb-6">We process your information for:</p>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Educational Services</h3>
-            <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Provide personalized AI-powered tutoring</li>
-              <li>• Track learning progress and performance</li>
-              <li>• Generate customized study plans</li>
-              <li>• Deliver relevant course content and materials</li>
-              <li>• Issue certificates and achievements</li>
-            </ul>
+            <p className="text-gray-600 mb-4">personalized tutoring, study plans, certificates, progress tracking and performance analysis</p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Platform Improvement</h3>
-            <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Analyze usage patterns to enhance features</li>
-              <li>• Improve AI algorithms and recommendations</li>
-              <li>• Develop new educational tools and resources</li>
-              <li>• Optimize platform performance and reliability</li>
-            </ul>
+            <p className="text-gray-600 mb-4">improving AI algorithms, analytics, and feature development</p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Communication</h3>
-            <ul className="text-gray-600 mb-8 space-y-2">
-              <li>• Send course updates and notifications</li>
-              <li>• Provide customer support and assistance</li>
-              <li>• Share educational content and tips</li>
-              <li>• Send promotional offers (with consent)</li>
-            </ul>
+            <p className="text-gray-600 mb-8">account notifications, updates, support, and (with consent) marketing offers</p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Sharing and Disclosure</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">3. Data Sharing and Disclosure</h2>
             
-            <p className="text-gray-600 mb-4">
-              We do not sell, rent, or share your personal information with third parties except in the following circumstances:
+            <p className="text-gray-600 mb-6">
+              We never sell or rent your personal data. We may share it only in these cases:
             </p>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Service Providers</h3>
             <p className="text-gray-600 mb-4">
-              We may share information with trusted service providers who help us operate our platform, such as:
+              with trusted vendors (e.g., cloud hosting, analytics, payment processors, customer support tools) bound by strict confidentiality agreements
             </p>
-            <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Cloud hosting and storage providers</li>
-              <li>• Payment processing companies</li>
-              <li>• Analytics and performance monitoring services</li>
-              <li>• Customer support tools</li>
-            </ul>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Legal Requirements</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Legal Obligations</h3>
             <p className="text-gray-600 mb-4">
-              We may disclose information when required by law or to:
+              to comply with laws, court orders, or prevent fraud/abuse
             </p>
-            <ul className="text-gray-600 mb-8 space-y-2">
-              <li>• Comply with legal processes or government requests</li>
-              <li>• Protect our rights, property, or safety</li>
-              <li>• Protect the rights and safety of our users</li>
-              <li>• Prevent fraud or abuse of our services</li>
-            </ul>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Business Transfers</h3>
+            <p className="text-gray-600 mb-8">
+              in the event of a merger, acquisition, or reorganization, with safeguards in place
+            </p>
+
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">4. Data Security</h2>
             
             <p className="text-gray-600 mb-4">
-              We implement comprehensive security measures to protect your information:
+              We use industry-standard measures to secure your data:
             </p>
             <ul className="text-gray-600 mb-8 space-y-2">
-              <li>• SSL/TLS encryption for all data transmission</li>
-              <li>• Secure data storage with regular backups</li>
-              <li>• Regular security audits and updates</li>
-              <li>• Access controls and employee training</li>
-              <li>• Incident response and monitoring systems</li>
+              <li>• SSL/TLS encryption for all transmissions</li>
+              <li>• Encrypted and access-controlled storage</li>
+              <li>• Regular security audits and monitoring</li>
+              <li>• Employee training and restricted access</li>
+              <li>• Incident response protocols</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights and Choices</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">5. Your Rights</h2>
             
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Access and Control</h3>
-            <p className="text-gray-600 mb-4">You have the right to:</p>
+            <p className="text-gray-600 mb-4">Depending on your location, you may have the right to:</p>
             <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• Access your personal information</li>
-              <li>• Update or correct your data</li>
-              <li>• Delete your account and data</li>
-              <li>• Export your learning data</li>
-              <li>• Opt-out of marketing communications</li>
+              <li>• Access your personal data</li>
+              <li>• Correct or update your information</li>
+              <li>• Request deletion of your account and data</li>
+              <li>• Export your learning data in a machine-readable format</li>
+              <li>• Opt out of marketing communications</li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Parental Rights</h3>
             <p className="text-gray-600 mb-8">
-              For users under 18, parents or legal guardians can review, modify, or delete their child's 
-              personal information by contacting us at privacy@smartlearners.ai.
+              For users under 18, parents/guardians may access, update, or request deletion of their child's information by contacting us.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Cookies and Tracking</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">6. Cookies and Tracking</h2>
             
             <p className="text-gray-600 mb-4">
               We use cookies and similar technologies to:
             </p>
             <ul className="text-gray-600 mb-6 space-y-2">
               <li>• Remember your login preferences</li>
-              <li>• Analyze platform usage and performance</li>
-              <li>• Personalize your learning experience</li>
-              <li>• Provide relevant advertisements</li>
+              <li>• Analyze platform usage</li>
+              <li>• Personalize learning content</li>
+              <li>• Show relevant ads (with consent where required)</li>
             </ul>
             <p className="text-gray-600 mb-8">
-              You can control cookie preferences through your browser settings.
+              You can manage cookies via your browser settings.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">International Data Transfers</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">7. International Data Transfers</h2>
             
             <p className="text-gray-600 mb-8">
-              Your information may be transferred to and processed in countries other than India. 
-              We ensure appropriate safeguards are in place to protect your data in accordance with 
-              applicable privacy laws.
+              Your data may be transferred and processed outside India. Where this occurs, we ensure compliance with applicable laws (such as GDPR Standard Contractual Clauses) and implement adequate safeguards to protect your information.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Changes to This Policy</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">8. Retention of Data</h2>
             
             <p className="text-gray-600 mb-8">
-              We may update this privacy policy from time to time. We will notify you of any 
-              material changes by email or through our platform. The updated policy will be 
-              effective immediately upon posting.
+              We retain personal data only as long as necessary for educational services, legal obligations, or dispute resolution. After that, your data is securely deleted or anonymized.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">9.Changes to This Policy</h2>
+            
+            <p className="text-gray-600 mb-8">
+              We may update this Privacy Policy from time to time. Material changes will be communicated via email or in-app notification. The updated version will be effective immediately upon posting.
+            </p>
+
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">10. Contact Us</h2>
             
             <p className="text-gray-600 mb-4">
-              If you have any questions about this privacy policy or our data practices, please contact us:
+              If you have questions or concerns about this Privacy Policy or your data rights, please contact:
             </p>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="text-gray-700 mb-2"><strong>Email:</strong> privacy@smartlearners.ai</p>
-              <p className="text-gray-700 mb-2"><strong>Phone:</strong> +91 123 456 7890</p>
-              <p className="text-gray-700 mb-2"><strong>Address:</strong> 123 Education Hub, Tech Park, Bangalore, India</p>
-              <p className="text-gray-700"><strong>Data Protection Officer:</strong> dpo@smartlearners.ai</p>
+              <p className="text-gray-700 mb-2"><strong>📧 Email:</strong> hello@smartlearners.ai</p>
+              <p className="text-gray-700 mb-2"><strong>📞 Phone:</strong> 8008066228</p>
+              <p className="text-gray-700 mb-2"><strong>🏢 Address:</strong> 4th Floor, Veer Chambers, Prakash Nagar, Hyderabad-500016, India</p>
             </div>
           </Card>
         </div>
