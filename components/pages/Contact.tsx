@@ -112,8 +112,13 @@ const Contact = () => {
   
   return (
     <div className="min-h-screen pt-20">
-      {/* Hidden form for Vercel Forms detection during build */}
-      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      {/* Hidden form for Netlify Forms detection during build */}
+      <form 
+        name="contact" 
+        data-netlify="true" 
+        data-netlify-honeypot="bot-field" 
+        hidden
+      >
         <input type="text" name="name" />
         <input type="email" name="email" />
         <input type="tel" name="phone" />
