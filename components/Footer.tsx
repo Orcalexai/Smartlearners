@@ -2,12 +2,14 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { 
   FaFacebook, 
   FaTwitter, 
   FaLinkedin, 
   FaInstagram,
+  FaWhatsapp,
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
@@ -44,7 +46,8 @@ const Footer = () => {
   
   const socialLinks = [
     { icon: <FaLinkedin />, href: '#', label: 'LinkedIn' },
-    { icon: <FaInstagram />, href: '#', label: 'Instagram' }
+    { icon: <FaInstagram />, href: 'https://www.instagram.com/smartlearners.ai?igsh=N3l6aWhrbnhqN2E0&utm_source=ig_contact_invite', label: 'Instagram' },
+    { icon: <FaWhatsapp />, href: 'https://wa.me/916303974827', label: 'WhatsApp' }
   ]
   
   return (
@@ -54,11 +57,17 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-6">
               <motion.div 
-                className="relative w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg"
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="relative w-16 h-16"
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                <HiSparkles className="text-white text-xl" />
+                <Image
+                  src="/logo.jpg"
+                  alt="Smart Learners.ai Logo"
+                  width={55}
+                  height={55}
+                  className="object-contain"
+                />
               </motion.div>
               <div>
                 <span className="font-bold text-xl text-white">Smart Learners.ai</span>
@@ -153,8 +162,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <FaPhone className="mr-3 text-sky-500 flex-shrink-0" />
-                <a href="tel:+918008066228" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  +91 8008066228
+                <a href="tel:+916303974827" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  +91 6303974827
                 </a>
               </li>
             </ul>

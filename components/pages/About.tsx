@@ -4,111 +4,154 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Card from '@/components/Card'
 import Button from '@/components/Button'
-import { FaLightbulb, FaUsers, FaAward, FaChartLine } from 'react-icons/fa'
-
+import { FaRocket, FaBullseye, FaStar, FaBookOpen, FaArrowRight } from 'react-icons/fa'
 const About = () => {
-  const values = [
-    {
-      icon: <FaLightbulb className="text-4xl text-purple-600" />,
-      title: 'Innovation',
-      description: 'Pushing boundaries with cutting-edge AI technology in education'
-    },
-    {
-      icon: <FaUsers className="text-4xl text-pink-600" />,
-      title: 'Student-Centric',
-      description: 'Every feature designed with student success in mind'
-    },
-    {
-      icon: <FaAward className="text-4xl text-indigo-600" />,
-      title: 'Excellence',
-      description: 'Committed to delivering the highest quality educational experience'
-    },
-    {
-      icon: <FaChartLine className="text-4xl text-purple-600" />,
-      title: 'Growth',
-      description: 'Fostering continuous improvement and lifelong learning'
-    }
-  ]
-  
-  const milestones = [
-    { year: '2021', event: 'Smart Learners.ai founded with a vision to revolutionize education' },
-    { year: '2022', event: 'Launched AI-powered learning platform for CBSE students' },
-    { year: '2023', event: 'Reached 25,000+ active students across India' },
-    { year: '2024', event: 'Expanded to cover complete NCERT syllabus for Classes 6-12' }
-  ]
-  
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl font-bold text-gray-900 mb-8">
               About <span className="gradient-text">Smart Learners.ai</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're on a mission to transform education through AI-powered personalized 
-              learning, making quality education accessible to every student in the world.
-            </p>
+            <div className="text-center max-w-3xl mx-auto">
+              <p className="text-xl text-gray-700 leading-relaxed">
+                At Smart Learners.ai, we're transforming education with AI-powered personalized learning. Our goal is simple: 
+                make world-class, adaptive education accessible to every learner.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
-      
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      {/* Our Story & What Makes Us Different - Side by Side */}
+      <section className="py-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative">
+        <div className="absolute inset-0 bg-mesh opacity-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Our Story */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">
                 Our <span className="gradient-text">Story</span>
               </h2>
-              <p className="text-gray-600 mb-4">
-                Smart Learners.ai was born from a simple observation: traditional education 
-                often follows a one-size-fits-all approach, leaving many students behind. 
-                We believed there had to be a better way.
-              </p>
-              <p className="text-gray-600 mb-4">
-                Our team of educators, technologists, and AI experts came together to create 
-                a platform that adapts to each student's unique learning style, pace, and needs. 
-                By leveraging cutting-edge AI technology, we've built a system that provides 
-                personalized guidance, instant feedback, and targeted support.
-              </p>
-              <Button href="/contact">Join Our Journey</Button>
+              
+              <div className="space-y-6 text-gray-700">
+                <p className="text-lg leading-relaxed">
+                  Traditional classrooms often follow a one-size-fits-all approach, leaving some students behind while others race ahead.
+                </p>
+                
+                <p className="text-lg leading-relaxed">
+                  We created Smart Learners.ai to change that. A team of educators and technologists joined hands to build a platform that adapts to your pace, style, and needs. Using cutting-edge AI, we provide:
+                </p>
+                
+                <div className="grid grid-cols-1 gap-3">
+                  <div className="flex items-center space-x-3 p-4 bg-purple-100 border border-purple-200 rounded-lg shadow-sm">
+                    <span className="text-purple-700 text-xl">🎯</span>
+                    <span className="text-gray-900 font-medium">Personalized guidance for each student</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 bg-blue-100 border border-blue-200 rounded-lg shadow-sm">
+                    <span className="text-blue-700 text-xl">⚡</span>
+                    <span className="text-gray-900 font-medium">Instant feedback on answers</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 bg-green-100 border border-green-200 rounded-lg shadow-sm">
+                    <span className="text-green-700 text-xl">🔍</span>
+                    <span className="text-gray-900 font-medium">Targeted support to fix knowledge gaps</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 bg-yellow-100 border border-yellow-200 rounded-lg shadow-sm">
+                    <span className="text-yellow-700 text-xl">✨</span>
+                    <span className="text-gray-900 font-medium">Confidence to succeed</span>
+                  </div>
+                </div>
+                
+                
+              </div>
             </motion.div>
-            
+
+            {/* What Makes Us Different */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 blur-3xl opacity-20"></div>
-              <Card gradient className="relative">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-                <p className="text-gray-700 italic text-lg">
-                  "To democratize quality education by providing every student with 
-                  personalized, AI-powered learning experiences that unlock their full 
-                  potential and prepare them for success in academics and beyond."
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">
+                What Makes Us <span className="gradient-text">Different</span>
+              </h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                Instead of focusing only on "what to learn," we also focus on:
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex-shrink-0 w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                    <FaBullseye className="text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">How you learn best</h3>
+                    <p className="text-gray-600">Personalized journeys tailored to your learning goals</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <FaBookOpen className="text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Why you made mistakes</h3>
+                    <p className="text-gray-600">Gap analysis with detailed feedback</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <FaStar className="text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">How to grow continuously</h3>
+                    <p className="text-gray-600">Identify strengths & weak areas that guide continuous learning and improvement.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                    <span className="text-orange-600 text-lg">📊</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Smart Study Planning</h3>
+                    <p className="text-gray-600">We prioritize high-weightage topics and important chapters, so students know where to focus their efforts for maximum results.</p>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div className="bg-gradient-to-r from-blue-100 to-purple-100 p-4 rounded-lg">
+                <p className="text-base text-gray-800 font-medium text-center">
+                  💡 It's not just an app. It's a learning companion.
                 </p>
-              </Card>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
-      
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      {/* Core Values */}
+      <section className="py-8 bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 relative">
+        <div className="absolute inset-0 bg-mesh opacity-25"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -117,72 +160,99 @@ const About = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Our Core <span className="gradient-text">Values</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These principles guide everything we do at Smart Learners.ai
-            </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
-                <Card hover className="h-full text-center">
-                  <div className="mb-4">{value.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
-                </Card>
-              </motion.div>
-            ))}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 * 0.1, duration: 0.5 }}
+            >
+              <Card hover className="h-full text-center">
+                <div className="mb-4 p-3 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl w-fit mx-auto">
+                  <FaRocket className="text-3xl text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation</h3>
+                <p className="text-gray-600">Always pushing boundaries with the latest Agentic AI Innovation.</p>
+              </Card>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1 * 0.1, duration: 0.5 }}
+            >
+              <Card hover className="h-full text-center">
+                <div className="mb-4 p-3 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl w-fit mx-auto">
+                  <FaBullseye className="text-3xl text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Student-Centric</h3>
+                <p className="text-gray-600">Every feature designed for student success.</p>
+              </Card>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 2 * 0.1, duration: 0.5 }}
+            >
+              <Card hover className="h-full text-center">
+                <div className="mb-4 p-3 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl w-fit mx-auto">
+                  <FaStar className="text-3xl text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Excellence</h3>
+                <p className="text-gray-600">High-quality, effective, and reliable solutions.</p>
+              </Card>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 3 * 0.1, duration: 0.5 }}
+            >
+              <Card hover className="h-full text-center">
+                <div className="mb-4 p-3 bg-gradient-to-br from-green-100 to-green-200 rounded-xl w-fit mx-auto">
+                  <FaBookOpen className="text-3xl text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Teacher Insights</h3>
+                <p className="text-gray-600">Providing teachers with clear reports and analysis to track student performance easily.</p>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </section>
-      
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      {/* Join the Movement */}
+      <section className="py-16 bg-gradient-to-br from-purple-600 to-pink-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="gradient-text">Journey</span>
+            <h2 className="text-4xl font-bold mb-6">
+              Join the Movement
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Key milestones in our mission to transform education
+            <p className="text-xl mb-4">
+              Smart Learners.ai is more than an app — it's a mission to give every student the tools to unlock their potential.
             </p>
+            <p className="text-lg mb-8 opacity-90">
+              👉 Whether you're a student, parent, or teacher, you're invited to be part of this journey.
+            </p>
+            <Button 
+              variant="secondary" 
+              size="xl" 
+              href="/contact" 
+              icon={<FaArrowRight />}
+            >
+              Get Started
+            </Button>
           </motion.div>
-          
-          <div className="max-w-3xl mx-auto">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="flex items-center mb-8"
-              >
-                <div className="flex-shrink-0 w-24 text-right pr-4">
-                  <span className="text-2xl font-bold gradient-text">{milestone.year}</span>
-                </div>
-                <div className="flex-shrink-0 w-4 h-4 bg-purple-600 rounded-full relative">
-                  <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-0.5 h-20 bg-purple-200"></div>
-                </div>
-                <div className="flex-grow pl-4">
-                  <Card className="p-4">
-                    <p className="text-gray-700">{milestone.event}</p>
-                  </Card>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
     </div>

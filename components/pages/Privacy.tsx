@@ -44,17 +44,18 @@ const Privacy = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               At Smart Learners.ai, we are committed to protecting your privacy and ensuring 
-              the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data, in compliance with applicable data protection laws including the Digital Personal Data Protection Act, 2023 (India) and, where relevant, the General Data Protection Regulation (GDPR - EU/EEA users).
+              the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data, in compliance with applicable data protection laws.
             </p>
             <p className="text-sm text-gray-500">
-              Last updated: December 20, 2024
+              Last updated: August 29, 2025
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-2 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative">
+        <div className="absolute inset-0 bg-mesh opacity-15"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-2">
             {principles.map((principle, index) => (
               <motion.div
@@ -79,8 +80,9 @@ const Privacy = () => {
         </div>
       </section>
 
-      <section className="py-2">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-2 bg-gradient-to-br from-gray-50 to-blue-50 relative">
+        <div className="absolute inset-0 bg-mesh opacity-10"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Card className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">1. Information We Collect</h2>
             
@@ -121,13 +123,13 @@ const Privacy = () => {
             <p className="text-gray-600 mb-6">We process your information for:</p>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Educational Services</h3>
-            <p className="text-gray-600 mb-4">personalized tutoring, study plans, certificates, progress tracking and performance analysis</p>
+            <p className="text-gray-600 mb-4">Personalized tutoring, study plans, certificates, progress tracking and performance analysis</p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Platform Improvement</h3>
-            <p className="text-gray-600 mb-4">improving AI algorithms, analytics, and feature development</p>
+            <p className="text-gray-600 mb-4">Analytics, and feature development</p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Communication</h3>
-            <p className="text-gray-600 mb-8">account notifications, updates, support, and (with consent) marketing offers</p>
+            <p className="text-gray-600 mb-8">Account notifications, updates, support, and (with consent) marketing offers</p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">3. Data Sharing and Disclosure</h2>
             
@@ -197,7 +199,7 @@ const Privacy = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">7. International Data Transfers</h2>
             
             <p className="text-gray-600 mb-8">
-              Your data may be transferred and processed outside India. Where this occurs, we ensure compliance with applicable laws (such as GDPR Standard Contractual Clauses) and implement adequate safeguards to protect your information.
+              Your data may be transferred and processed outside India. Where this occurs, we ensure compliance with applicable laws and implement adequate safeguards to protect your information.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">8. Retention of Data</h2>
@@ -219,7 +221,7 @@ const Privacy = () => {
             </p>
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="text-gray-700 mb-2"><strong>📧 Email:</strong> hello@smartlearners.ai</p>
-              <p className="text-gray-700 mb-2"><strong>📞 Phone:</strong> 8008066228</p>
+              <p className="text-gray-700 mb-2"><strong>📞 Phone:</strong> +91 6303974827</p>
               <p className="text-gray-700 mb-2"><strong>🏢 Address:</strong> 4th Floor, Veer Chambers, Prakash Nagar, Hyderabad-500016, India</p>
             </div>
           </Card>

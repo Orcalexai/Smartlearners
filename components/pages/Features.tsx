@@ -37,7 +37,7 @@ const Features = () => {
       title: 'Classwork & Homework',
       description: 'Assign, attempt, and track classwork and homework seamlessly.',
       details: [
-        'Teachers assign from app or upload',
+        'Teachers assign from our app',
         'Students attempt directly or upload answers',
         'Notifications for pending work',
         'Easy submission tracking'
@@ -61,8 +61,8 @@ const Features = () => {
       details: [
         'Auto-score with AI',
         'Mistake detection & categorization',
-        'Teacher manual override option',
-        'Faster grading and feedback'
+        'Faster grading and feedback',
+        'Teachers can review the performance'
       ]
     },
     {

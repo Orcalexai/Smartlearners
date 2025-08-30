@@ -10,7 +10,8 @@ import {
   FaMapMarkerAlt, 
   FaClock,
   FaLinkedin,
-  FaInstagram 
+  FaInstagram,
+  FaWhatsapp 
 } from 'react-icons/fa'
 
 const Contact = () => {
@@ -29,17 +30,38 @@ const Contact = () => {
     })
   }
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! We\'ll get back to you soon.')
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    })
+    
+    // Get form element
+    const form = e.target as HTMLFormElement
+    const formData = new FormData(form)
+    
+    try {
+      // Submit to Vercel Forms
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      })
+      
+      if (response.ok) {
+        alert('Thank you for your message! We\'ll get back to you soon.')
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        })
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('There was an error submitting your message. Please try again.')
+    }
   }
   
   const contactInfo = [
@@ -51,8 +73,8 @@ const Contact = () => {
     },
     {
       icon: <FaPhone className="text-2xl text-pink-600" />,
-      title: 'Call Us',
-      details: '+91 8008066228',
+      title: 'Msg Us',
+      details: '+91 6303974827',
       description: 'Mon-Fri from 9am to 6pm'
     },
     {
@@ -90,6 +112,20 @@ const Contact = () => {
   
   return (
     <div className="min-h-screen pt-20">
+      {/* Hidden form for Vercel Forms detection during build */}
+      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <select name="subject">
+          <option value="general">General Inquiry</option>
+          <option value="support">Technical Support</option>
+          <option value="courses">Course Information</option>
+          <option value="partnership">Partnership</option>
+          <option value="feedback">Feedback</option>
+        </select>
+        <textarea name="message"></textarea>
+      </form>
       <section className="py-12 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -109,8 +145,9 @@ const Contact = () => {
         </div>
       </section>
       
-      <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 relative">
+        <div className="absolute inset-0 bg-mesh opacity-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => (
               <motion.div
@@ -147,7 +184,14 @@ const Contact = () => {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Send us a Message
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true"
+                  onSubmit={handleSubmit} 
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -265,12 +309,20 @@ const Contact = () => {
                     <FaLinkedin className="text-xl" />
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/smartlearners.ai?igsh=N3l6aWhrbnhqN2E0&utm_source=ig_contact_invite"
                     className="p-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaInstagram className="text-xl" />
+                  </a>
+                  <a
+                    href="https://wa.me/916303974827"
+                    className="p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaWhatsapp className="text-xl" />
                   </a>
                 </div>
               </Card>
