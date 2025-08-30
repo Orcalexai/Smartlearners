@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 interface ButtonProps {
   children: React.ReactNode
@@ -12,6 +13,7 @@ interface ButtonProps {
   onClick?: () => void
   href?: string
   type?: 'button' | 'submit'
+  target?: '_blank' | '_self'
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -22,7 +24,8 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   onClick,
   href,
-  type = 'button'
+  type = 'button',
+  target
 }) => {
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -37,8 +40,51 @@ const Button: React.FC<ButtonProps> = ({
     outline: 'btn-outline'
   }
 
+  const isExternalLink = href && (href.startsWith('http') || href.startsWith('https'))
+  const shouldOpenInNewTab = target === '_blank' || isExternalLink
+
+  const buttonContent = (
+    <>
+      {icon && <span className="mr-2">{icon}</span>}
+      {children}
+    </>
+  )
+
+  const buttonClasses = `btn ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
+
+  if (href && !onClick) {
+    if (isExternalLink) {
+      return (
+        <motion.a
+          href={href}
+          target={shouldOpenInNewTab ? '_blank' : '_self'}
+          rel={shouldOpenInNewTab ? 'noopener noreferrer' : undefined}
+          className={buttonClasses}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.2 }}
+        >
+          {buttonContent}
+        </motion.a>
+      )
+    } else {
+      return (
+        <Link href={href}>
+          <motion.span
+            className={buttonClasses}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.2 }}
+          >
+            {buttonContent}
+          </motion.span>
+        </Link>
+      )
+    }
+  }
+
   const handleClick = () => {
-    if (href) {
+    if (href && shouldOpenInNewTab) {
       window.open(href, '_blank', 'noopener,noreferrer')
     } else if (onClick) {
       onClick()
@@ -48,14 +94,13 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <motion.button
       type={type}
-      className={`btn ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      className={buttonClasses}
       onClick={handleClick}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.2 }}
     >
-      {icon && <span className="mr-2">{icon}</span>}
-      {children}
+      {buttonContent}
     </motion.button>
   )
 }

@@ -47,14 +47,15 @@ const Terms = () => {
               By accessing or using our platform, you agree to be bound by these Terms. If you do not agree, you may not use the Platform.
             </p>
             <p className="text-sm text-gray-500">
-              Last updated: December 20, 2024
+              Last updated: August 29, 2025
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-4 bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 relative">
+        <div className="absolute inset-0 bg-mesh opacity-15"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
             {highlights.map((highlight, index) => (
               <motion.div
@@ -79,8 +80,9 @@ const Terms = () => {
         </div>
       </section>
 
-      <section className="py-4">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-4 bg-gradient-to-br from-gray-50 to-indigo-50 relative">
+        <div className="absolute inset-0 bg-mesh opacity-10"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Card className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">1. Legal Agreement</h2>
             
@@ -112,7 +114,7 @@ const Terms = () => {
             <ul className="text-gray-600 mb-6 space-y-2">
               <li>• Users must provide accurate and complete information during registration.</li>
               <li>• One account per user is allowed.</li>
-              <li>• Users under 18 may only register with verifiable parental or guardian consent, in compliance with India's DPDP Act, 2023.</li>
+              <li>• Users under 18 may only register with verifiable parental or guardian consent.</li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Account Security</h3>
@@ -189,7 +191,7 @@ const Terms = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">7. Privacy and Data Protection</h2>
             
             <p className="text-gray-600 mb-8">
-              Your privacy is important to us. Our Privacy Policy explains what information we collect, how we use it, and your rights. We comply with the Digital Personal Data Protection Act, 2023 (India) and, where applicable, the GDPR for international users.
+              Your privacy is important to us. Our Privacy Policy explains what information we collect, how we use it, and your rights.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">8. Disclaimers and Limitations</h2>
@@ -237,30 +239,20 @@ const Terms = () => {
               <li>• The service is discontinued (with reasonable notice).</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">11. Governing Law and Disputes</h2>
-            
-            <p className="text-gray-600 mb-4">
-              These Terms are governed by the laws of India. Disputes shall fall under the jurisdiction of courts in Bangalore, Karnataka, India.
-            </p>
-            
-            <p className="text-gray-600 mb-8">
-              Before litigation, both parties agree to attempt resolution through mediation or arbitration under the Arbitration and Conciliation Act, 1996.
-            </p>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">12. Changes to Terms</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">11. Changes to Terms</h2>
             
             <p className="text-gray-600 mb-8">
               We may update these Terms from time to time. Material changes will be communicated by email or platform notification at least 30 days before effect. Continued use after changes implies acceptance.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">13. Contact Information</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">12. Contact Information</h2>
             
             <p className="text-gray-600 mb-4">
               For any questions about these Terms, contact us:
             </p>
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="text-gray-700 mb-2">📧 <strong>Email:</strong> hello@smartlearners.ai</p>
-              <p className="text-gray-700 mb-2">📞 <strong>Phone:</strong> +91 8008066228</p>
+              <p className="text-gray-700 mb-2">📞 <strong>Phone:</strong> +91 6303974827</p>
               <p className="text-gray-700 mb-2">🏢 <strong>Address:</strong> 4th Floor, Veer Chambers, Prakash Nagar, Hyderabad-500016, India</p>
               <p className="text-gray-700 mb-4">🕑 <strong>Support Hours:</strong> Mon–Sat, 9:00 AM – 6:00 PM IST</p>
             </div>

@@ -29,13 +29,13 @@ const Home = () => {
     {
       icon: <FaBrain className="text-4xl text-white" />,
       title: 'AI-Powered Learning',
-      description: 'Advanced AI algorithms personalize your learning journey for maximum efficiency and engagement',
+      description: 'Advanced Agentic AI Innovation to personalize your learning journey for maximum efficiency and engagement',
       color: 'from-blue-500 to-indigo-600'
     },
     {
       icon: <FaChartLine className="text-4xl text-white" />,
-      title: 'Smart Performance Analysis',
-      description: 'From homework to classwork, track student progress with detailed class and individual reports.',
+      title: 'Gap Analysis',
+      description: 'From self study, homework, and classwork, track student progress with detailed class and individual reports.',
       color: 'from-indigo-500 to-purple-600'
     }
   ]
@@ -127,7 +127,7 @@ const Home = () => {
               className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 text-shadow text-rendering-fix leading-tight"
               variants={itemVariants}
             >
-              <span className="gradient-text">The No.1 Educational App in the World</span><br />
+              <span className="gradient-text">The No.1 Agentic AI Educational App</span><br />
               <span className="text-4xl md:text-6xl">All-in-One Learning Platform</span>
             </motion.h1>
             
@@ -143,7 +143,7 @@ const Home = () => {
               className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
               variants={itemVariants}
             >
-              <Button variant="secondary" size="xl" icon={<FaArrowRight />} href="/contact">
+              <Button variant="secondary" size="xl" icon={<FaArrowRight />} href="https://www.youtube.com/@AiEducator-j8l" target="_blank">
                 Watch Demo
               </Button>
             </motion.div>
@@ -181,8 +181,9 @@ const Home = () => {
       </section>
       
       {/* Features Section */}
-      <section className="pt-8 pb-16 bg-white">
-        <div className="container-max">
+      <section className="pt-4 pb-8 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative">
+        <div className="absolute inset-0 bg-mesh opacity-20"></div>
+        <div className="container-max relative z-10">
           <motion.div 
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
@@ -223,7 +224,7 @@ const Home = () => {
           </div>
           
           <motion.div 
-            className="flex justify-center mt-12"
+            className="flex justify-center mt-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -240,8 +241,9 @@ const Home = () => {
       
       
       {/* Final CTA Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-max text-center">
+      <section className="py-8 bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 relative">
+        <div className="absolute inset-0 bg-mesh opacity-30"></div>
+        <div className="container-max text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -257,7 +259,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact">
-                <Button variant="outline" size="xl" icon={<FaArrowRight />}>
+                <Button variant="secondary" size="xl" icon={<FaArrowRight />}>
                   Contact Us
                 </Button>
               </Link>

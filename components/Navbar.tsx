@@ -45,23 +45,19 @@ const Navbar = () => {
     >
       <div className="container-max">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center space-x-4 group">
-            <motion.div 
-              className="relative w-16 h-16"
-              whileHover={{ scale: 1.08, rotate: 3 }}
-              transition={{ duration: 0.3 }}
-            >
+          <Link href="/" className="flex items-center space-x-2 group">
+            <div className="relative w-16 h-16">
               <Image
                 src="/logo.jpg"
                 alt="Smart Learners.ai Logo"
-                width={64}
-                height={64}
+                width={55}
+                height={55}
                 className="object-contain"
                 priority
               />
-            </motion.div>
+            </div>
             <div className="flex flex-col">
-              <span className="font-bold text-2xl gradient-text group-hover:scale-105 transition-transform duration-300 text-rendering-fix">
+              <span className="font-bold text-2xl gradient-text text-rendering-fix">
                 Smart Learners.ai
               </span>
               <span className="text-sm text-gray-500 -mt-1 text-rendering-fix">AI-Powered Learning</span>

@@ -16,7 +16,7 @@ const Courses = () => {
       icon: <FaGraduationCap className="text-3xl" />,
       description: 'Full NCERT syllabus for Classes 6–12',
       focus: 'Step-by-step problem solving, concept clarity and AI-powered support for every learner',
-      keyFeatures: ['Classwork', 'Homework', 'Performance analysis', 'Instant feedback', 'Chatbot assistance'],
+      keyFeatures: ['Classwork', 'Homework', 'individual gap analysis', 'Instant feedback', 'Chatbot assistance'],
       color: 'from-blue-600 to-cyan-700',
       price: '₹300',
       originalPrice: '₹500',
@@ -24,7 +24,7 @@ const Courses = () => {
     },
     {
       id: 2,
-      title: 'IIT Foundation (Classes 6–12)',
+      title: 'NCERT + IIT Foundation (Classes 6–12)',
       type: 'iit-foundation',
       icon: <FaRocket className="text-3xl" />,
       description: 'Strong conceptual foundation for IIT from middle school',
@@ -41,14 +41,14 @@ const Courses = () => {
       type: 'jee-mains',
       icon: <FaCalculator className="text-3xl" />,
       description: 'Full JEE Main syllabus with NCERT + advanced problem solving',
-      focus: 'Practice with real exam patterns,focused practice to balance speed, accuracy, and strategy',
-      keyFeatures: ['Topic-wise tests', 'AI-based instant feedback', 'Similar Questions','Time Management'],
+      focus: 'Practice with real exam patterns,focused practice with individual gap analysis',
+      keyFeatures: ['Topic-wise tests', 'AI-based instant feedback', 'Advanced problem-solving practice','gap analysis'],
       color: 'from-orange-600 to-red-700',
       price: '₹600',
       originalPrice: '₹800',
       available: true
     },
-    {
+    /*{
       id: 4,
       title: 'JEE Advanced ',
       type: 'jee-advanced',
@@ -60,13 +60,13 @@ const Courses = () => {
       price: '₹800',
       originalPrice: '₹1,000',
       available: true
-    }
+    }*/
   ]
   
   
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-10 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-8 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -77,7 +77,7 @@ const Courses = () => {
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Our <span className="gradient-text">Courses</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               Comprehensive curriculum coverage with AI-powered learning 
               for Classes 6-12, IIT Foundation plus specialized JEE Mains and JEE Advanced preparation.
             </p>
@@ -87,8 +87,9 @@ const Courses = () => {
       </section>
       
       
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50 relative">
+        <div className="absolute inset-0 bg-mesh opacity-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -173,8 +174,9 @@ const Courses = () => {
         </div>
       </section>
       
-      <section className="py-20 bg-gradient-to-br from-orange-100 to-yellow-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-orange-100 via-yellow-50 to-pink-100 relative">
+        <div className="absolute inset-0 bg-mesh opacity-30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
