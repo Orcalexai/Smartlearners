@@ -115,8 +115,7 @@ const Contact = () => {
       {/* Hidden form for Netlify Forms detection during build */}
       <form 
         name="contact" 
-        data-netlify="true" 
-        data-netlify-honeypot="bot-field" 
+      
         hidden
       >
         <input type="text" name="name" />
