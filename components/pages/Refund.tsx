@@ -43,7 +43,7 @@ const Refund = () => {
               Refund <span className="gradient-text">Policy</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              At <b>Smart Learners.ai (Orcalex Technologies)</b>, we strive to provide high-quality digital learning experiences. Since our services include <b>instant access to digital content and personalized AI-driven tools</b>, we operate under a <b>non-refundable digital services policy</b>.
+              At <b>Smart Learners.ai (Orcalex Technologies LLP)</b>, we strive to provide high-quality digital learning experiences. Since our services include <b>instant access to digital content and personalized AI-driven tools</b>, we operate under a <b>non-refundable digital services policy</b>.
             </p>
             <p className="text-sm text-gray-500">Last updated: July 31, 2025</p>
           </motion.div>

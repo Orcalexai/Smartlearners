@@ -87,7 +87,7 @@ const Terms = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">1. Legal Agreement</h2>
             
             <p className="text-gray-600 mb-8">
-              These Terms constitute a binding legal agreement between you and Smart Learners.ai(Orcalex Technologies).
+              These Terms constitute a binding legal agreement between you and Smart Learners.ai(Orcalex Technologies LLP).
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">2. Description of Service</h2>
