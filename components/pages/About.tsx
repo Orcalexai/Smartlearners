@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Card from '@/components/Card'
 import Button from '@/components/Button'
@@ -52,7 +53,7 @@ const About = () => {
                 </p>
                 
                 <p className="text-lg leading-relaxed">
-                  We created Smart Learners.ai to change that. A team of educators and technologists joined hands to build a platform that adapts to your pace, style, and needs. Using cutting-edge AI, we provide:
+                  We created Smart Learners.ai to change that. A team of educators and technologists joined hands to build a platform that adapts to your pace and unique needs. Using cutting-edge Agentic AI, we provide:
                 </p>
                 
                 <div className="grid grid-cols-1 gap-3">
@@ -170,8 +171,13 @@ const About = () => {
               transition={{ delay: 0 * 0.1, duration: 0.5 }}
             >
               <Card hover className="h-full text-center">
-                <div className="mb-4 p-3 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl w-fit mx-auto">
-                  <FaRocket className="text-3xl text-purple-600" />
+                <div className="mb-6 mx-auto w-48 h-48 relative rounded-xl overflow-hidden shadow-lg">
+                  <Image 
+                    src="/innovation-value.png" 
+                    alt="Innovation"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation</h3>
                 <p className="text-gray-600">Always pushing boundaries with the latest Agentic AI Innovation.</p>
@@ -185,8 +191,13 @@ const About = () => {
               transition={{ delay: 1 * 0.1, duration: 0.5 }}
             >
               <Card hover className="h-full text-center">
-                <div className="mb-4 p-3 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl w-fit mx-auto">
-                  <FaBullseye className="text-3xl text-blue-600" />
+                <div className="mb-6 mx-auto w-48 h-48 relative rounded-xl overflow-hidden shadow-lg">
+                  <Image 
+                    src="/student-centric-value.png" 
+                    alt="Student-Centric"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Student-Centric</h3>
                 <p className="text-gray-600">Every feature designed for student success.</p>
@@ -200,8 +211,13 @@ const About = () => {
               transition={{ delay: 2 * 0.1, duration: 0.5 }}
             >
               <Card hover className="h-full text-center">
-                <div className="mb-4 p-3 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl w-fit mx-auto">
-                  <FaStar className="text-3xl text-yellow-600" />
+                <div className="mb-6 mx-auto w-48 h-48 relative rounded-xl overflow-hidden shadow-lg">
+                  <Image 
+                    src="/excellence-value.png" 
+                    alt="Excellence"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Excellence</h3>
                 <p className="text-gray-600">High-quality, effective, and reliable solutions.</p>
@@ -215,8 +231,13 @@ const About = () => {
               transition={{ delay: 3 * 0.1, duration: 0.5 }}
             >
               <Card hover className="h-full text-center">
-                <div className="mb-4 p-3 bg-gradient-to-br from-green-100 to-green-200 rounded-xl w-fit mx-auto">
-                  <FaBookOpen className="text-3xl text-green-600" />
+                <div className="mb-6 mx-auto w-48 h-48 relative rounded-xl overflow-hidden shadow-lg">
+                  <Image 
+                    src="/teacher-insights-value.png" 
+                    alt="Teacher Insights"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Teacher Insights</h3>
                 <p className="text-gray-600">Providing teachers with clear reports and analysis to track student performance easily.</p>

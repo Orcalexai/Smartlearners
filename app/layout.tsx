@@ -22,6 +22,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: '/icon.jpg' },
+      { url: '/favicon.ico' }
+    ],
+    apple: '/apple-icon.jpg',
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: 'Smart Learners.ai - AI-Powered Learning Platform',
     description: 'Experience personalized education with AI-powered learning for CBSE NCERT students.',
@@ -69,9 +77,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col relative">
           <Navbar />
-          <main className="flex-grow">
+          <main className="flex-grow relative z-10">
             {children}
           </main>
           <Footer />

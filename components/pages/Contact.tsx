@@ -11,7 +11,8 @@ import {
   FaClock,
   FaLinkedin,
   FaInstagram,
-  FaWhatsapp 
+  FaWhatsapp,
+  FaCommentDots 
 } from 'react-icons/fa'
 
 const Contact = () => {
@@ -72,7 +73,7 @@ const Contact = () => {
       description: 'Send us an email anytime'
     },
     {
-      icon: <FaPhone className="text-2xl text-pink-600" />,
+      icon: <FaCommentDots className="text-2xl text-pink-600" />,
       title: 'Msg Us',
       details: '+91 6303974827',
       description: 'Mon-Fri from 9am to 6pm'
@@ -94,7 +95,7 @@ const Contact = () => {
   const faqs = [
     {
       question: 'How does the AI tutoring work?',
-      answer: 'Our AI tutor uses advanced machine learning algorithms to understand your learning patterns and provide personalized guidance, instant feedback, and adaptive questioning.'
+      answer: 'Our Agentic AI tutor understands your learning patterns and provides personalized guidance, instant feedback, and adaptive questioning.'
     },
     {
       question: 'Can I use the platform on mobile?',
@@ -102,11 +103,11 @@ const Contact = () => {
     },
     {
       question: 'Can I track my progress?',
-      answer: 'Yes! In addition to NCERT coverage, we provide advanced practice modules for Olympiads and foundation courses for competitive exams.'
+      answer: 'Yes! You can track your progress anytime through detailed reports. The Smart Learners.ai shows your completed lessons, homework, and classwork, along with instant feedback. You’ll be able to see where you’ve improved and which areas need more practice. Teachers can also track both individual and class-wise progress to guide you better.'
     },
     {
       question: 'Do you provide practice beyond NCERT?',
-      answer: 'We have a dedicated JEE preparation module with 5,000+ questions, detailed solutions, and targeted practice sessions aligned with JEE Main patterns.'
+      answer: 'Yes! In addition to NCERT coverage, we provide advanced practice modules for Olympiads and foundation courses for competitive exams.'
     }
   ]
   
@@ -305,7 +306,7 @@ const Contact = () => {
                 </p>
                 <div className="flex space-x-4">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/orcalex-technologies/"
                     className="p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"

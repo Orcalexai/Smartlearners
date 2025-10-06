@@ -10,7 +10,7 @@ const Terms = () => {
     {
       icon: <FaGavel className="text-3xl text-blue-600" />,
       title: 'Legal Agreement',
-      description: 'Binding terms between you and Smart Learners.ai'
+      description: 'Binding terms between you and Smart Learners.ai(Orcalex Technologies LLP)'
     },
     {
       icon: <FaHandshake className="text-3xl text-green-600" />,
@@ -43,7 +43,7 @@ const Terms = () => {
               Terms & <span className="gradient-text">Conditions</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Please read these Terms and conditions carefully before using Smart Learners.ai. 
+              Please read these Terms and conditions carefully before using Smart Learners.ai(Orcalex Technologies LLP). 
               By accessing or using our platform, you agree to be bound by these Terms. If you do not agree, you may not use the Platform.
             </p>
             <p className="text-sm text-gray-500">
@@ -160,7 +160,7 @@ const Terms = () => {
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Payment Processing</h3>
             <ul className="text-gray-600 mb-6 space-y-2">
-              <li>• All payments are processed securely by third-party providers (e.g., Razorpay, Stripe).</li>
+              <li>• All payments are processed securely by third-party providers (e.g., Phonepay).</li>
               <li>• We do not store credit/debit card details.</li>
               <li>• Fees are charged in advance.</li>
               <li>• Failed payments may result in suspension.</li>
@@ -180,12 +180,12 @@ const Terms = () => {
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Content</h3>
             <p className="text-gray-600 mb-6">
-              All content, software, AI algorithms, design, trademarks, and technology are the property of Smart Learners.ai and protected by applicable laws.
+              All content, software, AI algorithms, design, trademarks, and technology are the property of Smart Learners.ai(Orcalex Technologies LLP) and protected by applicable laws.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">User-Generated Content</h3>
             <p className="text-gray-600 mb-8">
-              By submitting content (answers, feedback, uploads), you grant Smart Learners.ai a non-exclusive, royalty-free, worldwide license to use, display, and improve services. We reserve the right to moderate, remove, or edit user content that violates these Terms.
+              By submitting content (answers, feedback, uploads), you grant Smart Learners.ai(Orcalex Technologies LLP) a non-exclusive, royalty-free, worldwide license to use, display, and improve services. We reserve the right to moderate, remove, or edit user content that violates these Terms.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">7. Privacy and Data Protection</h2>

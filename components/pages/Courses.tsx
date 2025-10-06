@@ -31,7 +31,7 @@ const Courses = () => {
       focus: 'Higher-order problem solving with advanced practice sets from basics to advanced level challenges',
       keyFeatures: ['Chapter-wise assignments', 'Difficulty-based tests (Easy/Medium/Hard)'],
       color: 'from-green-600 to-emerald-700',
-      price: '₹500',
+      price: '₹800',
       originalPrice: '₹700',
       available: true
     },
@@ -44,7 +44,7 @@ const Courses = () => {
       focus: 'Practice with real exam patterns,focused practice with individual gap analysis',
       keyFeatures: ['Topic-wise tests', 'AI-based instant feedback', 'Advanced problem-solving practice','gap analysis'],
       color: 'from-orange-600 to-red-700',
-      price: '₹600',
+      price: '₹1000',
       originalPrice: '₹800',
       available: true
     },
@@ -136,14 +136,33 @@ const Courses = () => {
                   </div>
                   
                   <div className="mb-4 border-t pt-4">
-                    <div className="flex items-center justify-center">
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg px-4 py-2">
-                        <span className="text-xl font-bold text-gray-900">
-                          {course.price}
-                        </span>
-                        <span className="text-sm text-gray-600 ml-1">per month</span>
+                    {course.type === 'ncert' ? (
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-center">
+                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg px-4 py-2 w-full max-w-xs text-center">
+                            <div className="text-sm text-gray-600 mb-1">Class 6-10</div>
+                            <span className="text-xl font-bold text-gray-900">₹500</span>
+                            <span className="text-sm text-gray-600 ml-1">per month</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center justify-center">
+                          <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg px-4 py-2 w-full max-w-xs text-center">
+                            <div className="text-sm text-gray-600 mb-1">Class 11-12</div>
+                            <span className="text-xl font-bold text-gray-900">₹600</span>
+                            <span className="text-sm text-gray-600 ml-1">per month</span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      <div className="flex items-center justify-center">
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg px-4 py-2">
+                          <span className="text-xl font-bold text-gray-900">
+                            {course.price}
+                          </span>
+                          <span className="text-sm text-gray-600 ml-1">per month</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="mt-auto">

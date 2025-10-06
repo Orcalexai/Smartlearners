@@ -4,25 +4,12 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Card from '@/components/Card'
 import Button from '@/components/Button'
-import { 
-  FaBrain, 
-  FaChartLine, 
-  FaRobot, 
-  FaBookOpen, 
-  FaUserGraduate,
-  FaLightbulb,
-  FaCheckCircle,
-  FaSyncAlt,
-  FaSchool,
-  FaClipboardCheck,
-  FaFileAlt,
-  FaComments
-} from 'react-icons/fa'
+import { FaPenAlt, FaFileAlt, FaClipboardCheck, FaCheckCircle } from 'react-icons/fa'
 
 const Features = () => {
   const mainFeatures = [
     {
-      icon: <span className="text-5xl">🤖</span>,
+      icon: <span className="text-5xl">✅</span>,
       title: 'Auto-Correct',
       description: 'Upload your answer and get instant AI-powered scoring and insights.',
       details: [
@@ -33,7 +20,7 @@ const Features = () => {
       ]
     },
     {
-      icon: <span className="text-5xl">🏫</span>,
+      icon: <span className="text-5xl">✍️</span>,
       title: 'Classwork & Homework',
       description: 'Assign, attempt, and track classwork and homework seamlessly.',
       details: [
@@ -44,7 +31,12 @@ const Features = () => {
       ]
     },
     {
-      icon: <span className="text-5xl">📘</span>,
+      icon: (
+        <div className="relative">
+          <FaFileAlt className="text-5xl text-blue-600" />
+          <FaPenAlt className="text-3xl text-indigo-600 absolute -bottom-1 -right-1" />
+        </div>
+      ),
       title: 'Worksheets (Custom Questions)',
       description: 'Create and attempt your own sets of questions tailored to your practice needs.',
       details: [
@@ -55,7 +47,12 @@ const Features = () => {
       ]
     },
     {
-      icon: <span className="text-5xl">📄</span>,
+      icon: (
+        <div className="relative">
+          <FaClipboardCheck className="text-5xl text-green-600" />
+          <FaCheckCircle className="text-2xl text-emerald-500 absolute -bottom-1 -right-1 bg-white rounded-full" />
+        </div>
+      ),
       title: 'Answer-Sheet Correction (HW & CW)',
       description: 'Scan or upload written work for AI + teacher review.',
       details: [
@@ -77,7 +74,7 @@ const Features = () => {
       ]
     },
     {
-      icon: <span className="text-5xl">💬</span>,
+      icon: <span className="text-5xl">🤖</span>,
       title: 'Student Chatbot',
       description: 'Your personal study companion — ask, learn, and track your progress.',
       details: [
@@ -86,15 +83,24 @@ const Features = () => {
         'Request any solution instantly',
         'Available 24/7 for guidance'
       ]
-    }
-    
-    
-    
-  ]
-  
-  const additionalFeatures = [
+    },
     {
-      icon: <span className="text-3xl">🧩</span>,
+      icon: (
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-yellow-600">1</div>
+            <div className="h-4 w-12 bg-gradient-to-r from-yellow-400 to-yellow-300" style={{clipPath: 'polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%)'}}></div>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-green-600">2</div>
+            <div className="h-4 w-12 bg-gradient-to-r from-green-400 to-green-300" style={{clipPath: 'polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%)'}}></div>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-teal-600">3</div>
+            <div className="h-4 w-12 bg-gradient-to-r from-teal-400 to-teal-300" style={{clipPath: 'polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%)'}}></div>
+          </div>
+        </div>
+      ),
       title: 'Solve (Step-by-Step)',
       description: 'Understand solutions at your own pace with guided reveal-by-step learning.',
       details: [
@@ -105,7 +111,7 @@ const Features = () => {
       ]
     },
     {
-      icon: <span className="text-3xl">📚</span>,
+      icon: <span className="text-5xl">📚</span>,
       title: 'Concepts Required (in Solution)',
       description: 'Know the exact concepts behind every solution to strengthen fundamentals.',
       details: [
@@ -116,7 +122,7 @@ const Features = () => {
       ]
     },
     {
-      icon: <span className="text-3xl">🔄</span>,
+      icon: <span className="text-5xl">🔄</span>,
       title: 'Similar Questions',
       description: 'From any solution, click "Similar Questions" to practice variants instantly.',
       details: [
@@ -126,11 +132,8 @@ const Features = () => {
         'Improve exam readiness'
       ]
     }
-    
-    
-    
-    
   ]
+  
   
   return (
     <div className="min-h-screen pt-20">
@@ -164,10 +167,15 @@ const Features = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                <Card hover className="h-full">
+                <Card hover className={`h-full border-2 ${
+                  index % 4 === 0 ? 'bg-gradient-to-br from-blue-100 via-sky-100 to-blue-50 border-blue-400' :
+                  index % 4 === 1 ? 'bg-gradient-to-br from-green-100 via-emerald-100 to-green-50 border-green-400' :
+                  index % 4 === 2 ? 'bg-gradient-to-br from-purple-100 via-violet-100 to-purple-50 border-purple-400' :
+                  'bg-gradient-to-br from-orange-100 via-amber-100 to-orange-50 border-orange-400'
+                }`}>
                   <div className="flex flex-col lg:flex-row items-start gap-6">
                     <div className="flex-shrink-0">
-                      <div className="p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl">
+                      <div className="p-4 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center min-w-[80px] min-h-[80px]">
                         {feature.icon}
                       </div>
                     </div>
@@ -193,56 +201,6 @@ const Features = () => {
         </div>
       </section>
       
-      <section className="py-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Additional <span className="gradient-text">Benefits</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              More features that enhance your learning experience
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {additionalFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
-                <Card hover className="h-full">
-                  <div className="text-center mb-4">
-                    <div className="mb-4 p-3 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl w-fit mx-auto">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</p>
-                  </div>
-                  <ul className="space-y-2 text-left">
-                    {feature.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-center text-gray-700">
-                        <div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

@@ -96,7 +96,7 @@ const Navbar = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              <Button size="sm" icon={<HiSparkles />} href="/contact">
+              <Button size="sm" icon={<HiSparkles />} href="/get-started">
                 Get Started
               </Button>
             </motion.div>
@@ -153,7 +153,7 @@ const Navbar = () => {
                 transition={{ delay: 0.6, duration: 0.3 }}
                 className="pt-4"
               >
-                <Button className="w-full" size="md" icon={<HiSparkles />} href="/contact">
+                <Button className="w-full" size="md" icon={<HiSparkles />} href="/get-started">
                   Get Started
                 </Button>
               </motion.div>

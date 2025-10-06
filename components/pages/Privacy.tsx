@@ -43,7 +43,7 @@ const Privacy = () => {
               Privacy <span className="gradient-text">Policy</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              At Smart Learners.ai, we are committed to protecting your privacy and ensuring 
+              At Smart Learners.ai(Orcalex Technologies LLP), we are committed to protecting your privacy and ensuring 
               the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data, in compliance with applicable data protection laws.
             </p>
             <p className="text-sm text-gray-500">
@@ -113,8 +113,6 @@ const Privacy = () => {
               We automatically collect:
             </p>
             <ul className="text-gray-600 mb-8 space-y-2">
-              <li>• IP address and approximate location</li>
-              <li>• Device type, operating system, and browser information</li>
               <li>• Platform usage patterns</li>
             </ul>
 
@@ -125,8 +123,6 @@ const Privacy = () => {
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Educational Services</h3>
             <p className="text-gray-600 mb-4">Personalized tutoring, study plans, certificates, progress tracking and performance analysis</p>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Platform Improvement</h3>
-            <p className="text-gray-600 mb-4">Analytics, and feature development</p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Communication</h3>
             <p className="text-gray-600 mb-8">Account notifications, updates, support, and (with consent) marketing offers</p>
@@ -190,31 +186,25 @@ const Privacy = () => {
               <li>• Remember your login preferences</li>
               <li>• Analyze platform usage</li>
               <li>• Personalize learning content</li>
-              <li>• Show relevant ads (with consent where required)</li>
             </ul>
             <p className="text-gray-600 mb-8">
               You can manage cookies via your browser settings.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">7. International Data Transfers</h2>
             
-            <p className="text-gray-600 mb-8">
-              Your data may be transferred and processed outside India. Where this occurs, we ensure compliance with applicable laws and implement adequate safeguards to protect your information.
-            </p>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">8. Retention of Data</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">7. Retention of Data</h2>
             
             <p className="text-gray-600 mb-8">
               We retain personal data only as long as necessary for educational services, legal obligations, or dispute resolution. After that, your data is securely deleted or anonymized.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">9.Changes to This Policy</h2>
-            
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">8. Changes to This Policy</h2>
+
             <p className="text-gray-600 mb-8">
               We may update this Privacy Policy from time to time. Material changes will be communicated via email or in-app notification. The updated version will be effective immediately upon posting.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">10. Contact Us</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">9. Contact Us</h2>
             
             <p className="text-gray-600 mb-4">
               If you have questions or concerns about this Privacy Policy or your data rights, please contact:
