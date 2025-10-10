@@ -11,6 +11,7 @@ interface CardProps {
   glow?: boolean
   className?: string
   delay?: number
+  onClick?: () => void
 }
 
 const Card: React.FC<CardProps> = ({
@@ -20,7 +21,8 @@ const Card: React.FC<CardProps> = ({
   glass = false,
   glow = false,
   className = '',
-  delay = 0
+  delay = 0,
+  onClick
 }) => {
   const baseClasses = 'card'
   const hoverClasses = hover ? 'card-hover' : ''
@@ -35,6 +37,7 @@ const Card: React.FC<CardProps> = ({
       viewport={{ once: true }}
       transition={{ delay, duration: 0.5 }}
       className={`${baseClasses} ${hoverClasses} ${gradientClasses} ${glassClasses} ${glowClasses} ${className}`}
+      onClick={onClick}
     >
       {children}
     </motion.div>
