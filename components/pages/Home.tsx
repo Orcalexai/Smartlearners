@@ -71,7 +71,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-10 pb-0 overflow-hidden">
+      <section className="relative pt-10 pb-10 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50"></div>
@@ -161,7 +161,7 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-rendering-fix leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 pt-20 mb-6 text-rendering-fix leading-tight">
               Why Choose <span className="gradient-text">Smart Learners</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-rendering-fix">

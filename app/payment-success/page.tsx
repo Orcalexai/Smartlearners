@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Card from '@/components/Card'
@@ -8,7 +8,7 @@ import Button from '@/components/Button'
 import Link from 'next/link'
 import { FaCheckCircle, FaUser, FaLock, FaCopy, FaSpinner } from 'react-icons/fa'
 
-export default function PaymentSuccessPage() {
+function PaymentSuccessContent() {
   const searchParams = useSearchParams()
   const orderId = searchParams.get('order_id')
 
@@ -170,5 +170,20 @@ export default function PaymentSuccessPage() {
         </motion.div>
       </div>
     </div>
+  )
+}
+
+export default function PaymentSuccessPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <FaSpinner className="animate-spin text-4xl text-blue-600 mx-auto mb-4" />
+          <p className="text-lg">Loading...</p>
+        </div>
+      </div>
+    }>
+      <PaymentSuccessContent />
+    </Suspense>
   )
 }
