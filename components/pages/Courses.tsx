@@ -248,7 +248,7 @@ const Courses = () => {
               <Card className="text-center p-6">
                 <FaGraduationCap className="text-3xl text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Course Updates</h3>
-                <p className="text-gray-600 text-sm">Regular updates on course development and progress</p>
+                <p className="text-gray-600 text-sm">Ensure consistent updates on course progress and new developments</p>
               </Card>
             </motion.div>
           </div>

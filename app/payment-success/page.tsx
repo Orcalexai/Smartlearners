@@ -25,7 +25,7 @@ function PaymentSuccessContent() {
   const checkPaymentStatus = async () => {
     try {
       console.log('🔍 Checking payment status for order:', orderId)
-      const response = await fetch(`http://localhost:8000/api/payment/status/${orderId}`)
+      const response = await fetch(`https://smartgen.smartlearners.ai/api/payment/status/${orderId}`)
       console.log('📊 Payment status response:', response.status, response.statusText)
 
       const data = await response.json()
