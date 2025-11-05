@@ -53,6 +53,7 @@ const Navbar = () => {
                 width={55}
                 height={55}
                 className="object-contain"
+                style={{ width: 'auto', height: 'auto' }}
                 priority
               />
             </div>

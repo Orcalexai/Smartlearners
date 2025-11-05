@@ -14,6 +14,7 @@ interface ButtonProps {
   href?: string
   type?: 'button' | 'submit'
   target?: '_blank' | '_self'
+  disabled?: boolean
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -25,7 +26,8 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   href,
   type = 'button',
-  target
+  target,
+  disabled = false
 }) => {
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -69,15 +71,15 @@ const Button: React.FC<ButtonProps> = ({
       )
     } else {
       return (
-        <Link href={href}>
-          <motion.span
-            className={buttonClasses}
+        <Link href={href} className={buttonClasses}>
+          <motion.div
+            style={{ display: 'inline-flex', alignItems: 'center' }}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ duration: 0.2 }}
           >
             {buttonContent}
-          </motion.span>
+          </motion.div>
         </Link>
       )
     }
@@ -96,8 +98,9 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       className={buttonClasses}
       onClick={handleClick}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      disabled={disabled}
+      whileHover={{ scale: disabled ? 1 : 1.02 }}
+      whileTap={{ scale: disabled ? 1 : 0.98 }}
       transition={{ duration: 0.2 }}
     >
       {buttonContent}

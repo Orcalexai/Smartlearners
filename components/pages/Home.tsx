@@ -137,12 +137,12 @@ const Home = () => {
               <span className="gradient-text font-semibold"> Learn in silence, shine with brilliance.</span>
             </motion.p>
             
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center mb-0"
               variants={itemVariants}
             >
-              <Button variant="secondary" size="xl" icon={<FaArrowRight />} href="https://www.youtube.com/@AiEducator-j8l" target="_blank">
-                Watch Demo
+              <Button variant="secondary" size="xl" icon={<FaArrowRight />} href="/free-trial">
+                Start Free Trial
               </Button>
             </motion.div>
             
@@ -181,10 +181,11 @@ const Home = () => {
               >
                 <div className="mb-6 mx-auto">
                   <div className="relative w-64 h-64 mx-auto">
-                    <Image 
-                      src={feature.image} 
+                    <Image
+                      src={feature.image}
                       alt={feature.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-contain"
                     />
                   </div>
@@ -238,10 +239,11 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
               <Card hover glow delay={0} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveStudentCard(activeStudentCard === 0 ? null : 0)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/login-portal.png" 
-                    alt="Login & Access" 
-                    fill 
+                  <Image
+                    src="/login-portal.png"
+                    alt="Login & Access"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeStudentCard === 0 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                   {/* Text overlay positioned further down */}
@@ -258,10 +260,11 @@ const Home = () => {
               
               <Card hover glow delay={0.1} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveStudentCard(activeStudentCard === 1 ? null : 1)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/merged-student-dashboard.png" 
-                    alt="Self Practice" 
-                    fill 
+                  <Image
+                    src="/merged-student-dashboard.png"
+                    alt="Self Practice"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeStudentCard === 1 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                 </div>
@@ -277,10 +280,11 @@ const Home = () => {
               
               <Card hover glow delay={0.2} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveStudentCard(activeStudentCard === 2 ? null : 2)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/merged-teacher-dashboard.png" 
-                    alt="Homework" 
-                    fill 
+                  <Image
+                    src="/merged-teacher-dashboard.png"
+                    alt="Homework"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeStudentCard === 2 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                 </div>
@@ -296,10 +300,11 @@ const Home = () => {
               
               <Card hover glow delay={0.3} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveStudentCard(activeStudentCard === 3 ? null : 3)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/merged-performance-analysis.png" 
-                    alt="Track Progress" 
-                    fill 
+                  <Image
+                    src="/merged-performance-analysis.png"
+                    alt="Track Progress"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeStudentCard === 3 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                 </div>
@@ -315,10 +320,11 @@ const Home = () => {
               
               <Card hover glow delay={0.4} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveStudentCard(activeStudentCard === 4 ? null : 4)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/merged-card-image.png" 
-                    alt="Chatbot" 
-                    fill 
+                  <Image
+                    src="/merged-card-image.png"
+                    alt="Chatbot"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeStudentCard === 4 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                 </div>
@@ -342,10 +348,11 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
               <Card hover glow delay={0} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveTeacherCard(activeTeacherCard === 0 ? null : 0)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/login-portal.png" 
-                    alt="Login & Assign" 
-                    fill 
+                  <Image
+                    src="/login-portal.png"
+                    alt="Login & Assign"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeTeacherCard === 0 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                 </div>
@@ -361,10 +368,11 @@ const Home = () => {
               
               <Card hover glow delay={0.1} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveTeacherCard(activeTeacherCard === 1 ? null : 1)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/merged-classwork-homework.png" 
-                    alt="Homework & Classwork" 
-                    fill 
+                  <Image
+                    src="/merged-classwork-homework.png"
+                    alt="Homework & Classwork"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeTeacherCard === 1 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                 </div>
@@ -380,10 +388,11 @@ const Home = () => {
               
               <Card hover glow delay={0.2} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveTeacherCard(activeTeacherCard === 2 ? null : 2)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/merged-assignment-latest.png" 
-                    alt="Worksheets" 
-                    fill 
+                  <Image
+                    src="/merged-assignment-latest.png"
+                    alt="Worksheets"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeTeacherCard === 2 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                 </div>
@@ -399,10 +408,11 @@ const Home = () => {
               
               <Card hover glow delay={0.3} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveTeacherCard(activeTeacherCard === 3 ? null : 3)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/merged-performance.png" 
-                    alt="Class Analysis" 
-                    fill 
+                  <Image
+                    src="/merged-performance.png"
+                    alt="Class Analysis"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeTeacherCard === 3 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                 </div>
@@ -418,10 +428,11 @@ const Home = () => {
               
               <Card hover glow delay={0.4} className="overflow-visible p-0 group relative cursor-pointer" onClick={() => setActiveTeacherCard(activeTeacherCard === 4 ? null : 4)}>
                 <div className="relative h-48 w-full bg-slate-800 overflow-visible">
-                  <Image 
-                    src="/merged-performance-analysis.png" 
-                    alt="Student Analysis" 
-                    fill 
+                  <Image
+                    src="/merged-performance-analysis.png"
+                    alt="Student Analysis"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 20vw"
                     className={`object-contain p-2 transition-all duration-500 ease-in-out ${activeTeacherCard === 4 ? 'scale-[2.5] z-50 shadow-2xl rounded-lg' : ''}`}
                   />
                 </div>
