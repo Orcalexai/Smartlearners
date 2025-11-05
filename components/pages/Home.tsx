@@ -137,12 +137,12 @@ const Home = () => {
               <span className="gradient-text font-semibold"> Learn in silence, shine with brilliance.</span>
             </motion.p>
             
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center mb-0"
               variants={itemVariants}
             >
-              <Button variant="secondary" size="xl" icon={<FaArrowRight />} href="https://www.youtube.com/@AiEducator-j8l" target="_blank">
-                Watch Demo
+              <Button variant="secondary" size="xl" icon={<FaArrowRight />} href="/free-trial">
+                Start Free Trial
               </Button>
             </motion.div>
             

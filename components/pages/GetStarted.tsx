@@ -130,7 +130,7 @@ const GetStarted = () => {
 
         console.log('🚀 Starting registration...', registrationPayload)
 
-        const registrationResponse = await fetch('http://localhost:8000/api/register', {
+        const registrationResponse = await fetch('https://smartgen.smartlearners.ai/api/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ const GetStarted = () => {
           registration_id: registrationData.registration_id
         })
 
-        const paymentResponse = await fetch('http://localhost:8000/api/payment/initiate', {
+        const paymentResponse = await fetch('https://smartgen.smartlearners.ai/api/payment/initiate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

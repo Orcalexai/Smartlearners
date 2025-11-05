@@ -38,12 +38,12 @@ PHONEPE_CLIENT_SECRET = "666ac7e0-800e-409b-8ba6-a080e8bb7d77"
 
 # Production URLs
 PHONEPE_PRODUCTION_URL = "https://api.phonepe.com/apis/hermes"
-PHONEPE_CALLBACK_URL = "http://64.227.144.219:8000/payment/callback"
-PHONEPE_REDIRECT_URL = "http://www.smartlearners.ai/payment-success"
+PHONEPE_CALLBACK_URL = "https://smartgen.smartlearners.ai/payment/callback"
+PHONEPE_REDIRECT_URL = "https://smartlearners.ai/payment-success"
 
 # Course fees mapping
 COURSE_FEES = {
-    "ncert-6-10": 500.00,
+    "ncert-6-10": 1.00,
     "ncert-11-12": 600.00,
     "iit-foundation": 800.00,
     "jee-mains": 1000.00
@@ -147,6 +147,17 @@ class RegistrationCreate(BaseModel):
 
 class PaymentInitiate(BaseModel):
     registration_id: str  # Can be either numeric ID or string registration_id
+
+class FreeTrialCreate(BaseModel):
+    fullname: str
+    email: EmailStr
+    username: str
+    roll_number: str
+    phone_number: str
+    password: Optional[str] = None
+    payment_done: Optional[bool] = False
+    school_name: Optional[str] = None
+    class_name: Optional[str] = None
 
 # ============= Utility Functions =============
 def generate_username(student_name: str, registration_id: int) -> str:
@@ -454,7 +465,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "https://www.smartlearners.ai",
-        "https://smartlearners.ai"
+        "https://smartlearners.ai",
+        "https://smartgen.smartlearners.ai"
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -589,28 +601,49 @@ async def initiate_payment(payment: PaymentInitiate, db: Session = Depends(get_d
 
 @app.post("/payment/callback")
 async def payment_callback(request: Request, db: Session = Depends(get_db)):
-    """Handle PhonePe payment callback using official SDK"""
+    """Handle PhonePe payment callback with Basic Auth validation"""
     try:
         # Get callback data from headers and body
         callback_header = request.headers.get("Authorization", "")
+        x_verify_header = request.headers.get("X-VERIFY", "")
         callback_body = await request.body()
         callback_body_str = callback_body.decode('utf-8')
 
         print(f"=== PhonePe Callback Received ===")
         print(f"Authorization Header: {callback_header}")
+        print(f"X-VERIFY Header: {x_verify_header}")
         print(f"Callback Body: {callback_body_str}")
         print(f"================================")
 
-        # For PhonePe, you need to configure username and password in their dashboard
-        # These are typically your merchant credentials
-        username_configured = PHONEPE_CLIENT_ID  # or configured username
-        password_configured = PHONEPE_CLIENT_SECRET  # or configured password
+        # Step 1: Validate Basic Auth credentials
+        if callback_header:
+            # Decode Basic Auth header
+            try:
+                # Format: "Basic base64(username:password)"
+                auth_type, auth_string = callback_header.split(" ", 1)
+                if auth_type.lower() == "basic":
+                    decoded_auth = base64.b64decode(auth_string).decode('utf-8')
+                    username, password = decoded_auth.split(":", 1)
+
+                    # Validate credentials
+                    if username != PHONEPE_CLIENT_ID or password != PHONEPE_CLIENT_SECRET:
+                        print(f"❌ Invalid credentials: {username}")
+                        raise HTTPException(status_code=401, detail="Invalid credentials")
+
+                    print(f"✅ Basic Auth validated successfully")
+            except Exception as e:
+                print(f"❌ Basic Auth validation failed: {e}")
+                raise HTTPException(status_code=401, detail="Authentication failed")
+
+        # Step 2: For PhonePe SDK validation (if using SDK)
+        username_configured = PHONEPE_CLIENT_ID
+        password_configured = PHONEPE_CLIENT_SECRET
 
         # Validate callback using official SDK
         callback_response = validate_phonepe_callback(
             username=username_configured,
             password=password_configured,
-            callback_header=callback_header,
+            callback_header=x_verify_header or callback_header,
             callback_body=callback_body_str
         )
 
@@ -776,6 +809,67 @@ async def check_payment_status(merchant_order_id: str, db: Session = Depends(get
 async def test_endpoint():
     """Test if API is working"""
     return {"status": "API is working", "timestamp": datetime.now().isoformat()}
+
+@app.post("/api/free-trial/register")
+async def register_free_trial(trial_data: FreeTrialCreate):
+    """Register a free trial user by forwarding to external API"""
+    try:
+        # Prepare payload for external API
+        payload = {
+            "fullname": trial_data.fullname,
+            "email": trial_data.email,
+            "username": trial_data.username,
+            "roll_number": trial_data.roll_number,
+            "phone_number": trial_data.phone_number,
+            "payment_done": trial_data.payment_done
+        }
+
+        # Only include optional fields if provided
+        if trial_data.password:
+            payload["password"] = trial_data.password
+        if trial_data.school_name:
+            payload["school_name"] = trial_data.school_name
+        if trial_data.class_name:
+            payload["class_name"] = trial_data.class_name
+
+        print(f"=== Free Trial Registration ===")
+        print(f"Username: {trial_data.username}")
+        print(f"Email: {trial_data.email}")
+        print(f"Forwarding to external API...")
+
+        # Forward request to external API
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            response = await client.post(
+                "https://autogen.aieducator.com/create-user-from-payment/",
+                json=payload,
+                headers={"Content-Type": "application/json"}
+            )
+
+            print(f"External API Response Status: {response.status_code}")
+            print(f"External API Response: {response.text}")
+
+            response_data = response.json()
+
+            if response.status_code == 200 and response_data.get("status") == "success":
+                return {
+                    "success": True,
+                    "status": "success",
+                    "username": response_data.get("username"),
+                    "payment_done": response_data.get("payment_done"),
+                    "trial_expiry_date": response_data.get("trial_expiry_date")
+                }
+            else:
+                error_msg = response_data.get("error", "Registration failed")
+                raise HTTPException(status_code=response.status_code, detail=error_msg)
+
+    except httpx.RequestError as e:
+        print(f"Request Error: {str(e)}")
+        raise HTTPException(status_code=503, detail=f"External API unreachable: {str(e)}")
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Free trial registration error: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # Run with: uvicorn backend:app --reload --port 8000
