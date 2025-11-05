@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Card from '@/components/Card'
 import Button from '@/components/Button'
 import { FaUser, FaArrowRight, FaEye, FaEyeSlash } from 'react-icons/fa'
+import toast, { Toaster } from 'react-hot-toast'
 
 const FreeTrialForm = () => {
   const [formData, setFormData] = useState({
@@ -30,20 +31,20 @@ const FreeTrialForm = () => {
 
   const validateForm = () => {
     if (!formData.fullName || !formData.rollNumber ||
-        !formData.whatsappNumber || !formData.email || !formData.username) {
-      alert('Please fill in all required fields')
+        !formData.whatsappNumber || !formData.email || !formData.username || !formData.password) {
+      toast.error('Please fill in all required fields')
       return false
     }
     if (!/^[0-9]{10}$/.test(formData.whatsappNumber)) {
-      alert('Please enter a valid 10-digit WhatsApp number')
+      toast.error('Please enter a valid 10-digit WhatsApp number')
       return false
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      alert('Please enter a valid email address')
+      toast.error('Please enter a valid email address')
       return false
     }
-    if (formData.password && formData.password.length < 8) {
-      alert('Password must be at least 8 characters long')
+    if (formData.password.length < 8) {
+      toast.error('Password must be at least 8 characters long')
       return false
     }
     return true
@@ -59,7 +60,7 @@ const FreeTrialForm = () => {
           roll_number: formData.rollNumber,
           phone_number: formData.whatsappNumber,
           payment_done: false,
-          ...(formData.password && { password: formData.password }),
+          password: formData.password,
           ...(formData.schoolName && { school_name: formData.schoolName }),
           ...(formData.className && { class_name: formData.className })
         }
@@ -86,7 +87,47 @@ const FreeTrialForm = () => {
         console.log('Registration successful:', data)
 
         if (data.success && data.status === 'success') {
-          alert(`Free trial registration successful!\n\nUsername: ${data.username}\nTrial expires: ${new Date(data.trial_expiry_date).toLocaleDateString()}\n\nYou can now login at https://app1.aieducator.com/login`)
+          // Show success toast with custom styling
+          toast.success(
+            (t) => (
+              <div className="flex flex-col gap-2">
+                <div className="font-bold text-lg text-green-700">
+                  🎉 Free Trial Registration Successful!
+                </div>
+                <div className="space-y-1 text-sm">
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold text-gray-700">Username:</span>
+                    <span className="text-blue-600 font-medium">{data.username}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold text-gray-700">Password:</span>
+                    <span className="text-blue-600 font-medium">{formData.password}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold text-gray-700">Trial expires:</span>
+                    <span className="text-gray-600">{new Date(data.trial_expiry_date).toLocaleDateString()}</span>
+                  </div>
+                </div>
+                <div className="mt-2 pt-2 border-t border-gray-200">
+                  <a
+                    href="https://app1.aieducator.com/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-700 font-medium underline text-sm"
+                  >
+                    Login now →
+                  </a>
+                </div>
+              </div>
+            ),
+            {
+              duration: 8000,
+              style: {
+                maxWidth: '500px',
+                padding: '16px',
+              },
+            }
+          )
           // Reset form
           setFormData({
             fullName: '',
@@ -113,13 +154,42 @@ const FreeTrialForm = () => {
           errorMessage = JSON.stringify(error)
         }
 
-        alert(`Error: ${errorMessage}`)
+        toast.error(errorMessage, {
+          duration: 5000,
+          style: {
+            maxWidth: '500px',
+          },
+        })
       }
     }
   }
 
   return (
     <div className="min-h-screen pt-20 relative overflow-hidden">
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        containerStyle={{
+          top: 80,
+          zIndex: 9999,
+        }}
+        toastOptions={{
+          success: {
+            style: {
+              background: '#f0fdf4',
+              border: '1px solid #86efac',
+              zIndex: 9999,
+            },
+          },
+          error: {
+            style: {
+              background: '#fef2f2',
+              border: '1px solid #fca5a5',
+              zIndex: 9999,
+            },
+          },
+        }}
+      />
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-cyan-50">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3),transparent_50%)]" />
@@ -262,7 +332,7 @@ const FreeTrialForm = () => {
 
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Password
+                  Password *
                 </label>
                 <div className="relative">
                   <input
@@ -271,7 +341,8 @@ const FreeTrialForm = () => {
                     value={formData.password}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 pr-12 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gradient-to-r from-blue-50/50 to-sky-50/50 backdrop-blur-sm transition-all duration-200 hover:from-blue-50 hover:to-sky-50"
-                    placeholder="Minimum 8 characters (optional)"
+                    placeholder="Minimum 8 characters"
+                    required
                   />
                   <button
                     type="button"
