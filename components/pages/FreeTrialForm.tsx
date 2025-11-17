@@ -13,6 +13,7 @@ const FreeTrialForm = () => {
     rollNumber: '',
     schoolName: '',
     className: '',
+    sectionName: '',
     whatsappNumber: '',
     email: '',
     username: '',
@@ -21,7 +22,7 @@ const FreeTrialForm = () => {
 
   const [showPassword, setShowPassword] = useState(false)
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -62,7 +63,8 @@ const FreeTrialForm = () => {
           payment_done: false,
           password: formData.password,
           ...(formData.schoolName && { school_name: formData.schoolName }),
-          ...(formData.className && { class_name: formData.className })
+          ...(formData.className && { class_name: formData.className }),
+          ...(formData.sectionName && { section_name: formData.sectionName })
         }
 
         console.log('Starting free trial registration...', payload)
@@ -134,6 +136,7 @@ const FreeTrialForm = () => {
             rollNumber: '',
             schoolName: '',
             className: '',
+            sectionName: '',
             whatsappNumber: '',
             email: '',
             username: '',
@@ -274,13 +277,32 @@ const FreeTrialForm = () => {
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Class Name
                 </label>
-                <input
-                  type="text"
+                <select
                   name="className"
                   value={formData.className}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gradient-to-r from-blue-50/50 to-sky-50/50 backdrop-blur-sm transition-all duration-200 hover:from-blue-50 hover:to-sky-50"
-                  placeholder="Enter your class (e.g., Class 10)"
+                >
+                  <option value="">Select Class</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Section Name
+                </label>
+                <input
+                  type="text"
+                  name="sectionName"
+                  value={formData.sectionName}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gradient-to-r from-blue-50/50 to-sky-50/50 backdrop-blur-sm transition-all duration-200 hover:from-blue-50 hover:to-sky-50"
+                  placeholder="Enter your section (e.g., A, B, C)"
                 />
               </div>
 

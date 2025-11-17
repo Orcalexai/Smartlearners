@@ -33,11 +33,11 @@ const Navbar = () => {
   const isActive = (path: string) => pathname === path
   
   return (
-    <motion.nav 
+    <motion.nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 navbar ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-200/50' 
-          : 'bg-white/80 backdrop-blur-md'
+        scrolled
+          ? 'bg-gradient-to-r from-purple-100/95 via-blue-100/95 to-pink-100/95 backdrop-blur-xl shadow-lg shadow-purple-500/20 border-b-2 border-purple-300/40'
+          : 'bg-gradient-to-r from-purple-100/90 via-blue-100/90 to-pink-100/90 backdrop-blur-md shadow-md shadow-blue-500/10'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -45,23 +45,23 @@ const Navbar = () => {
     >
       <div className="container-max">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="relative w-16 h-16">
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative w-12 h-12 flex items-center justify-center">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Smart Learners.ai Logo"
-                width={55}
-                height={55}
+                width={48}
+                height={48}
                 className="object-contain"
                 style={{ width: 'auto', height: 'auto' }}
                 priority
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-2xl gradient-text text-rendering-fix">
+            <div className="flex flex-col justify-center">
+              <span className="font-bold text-xl gradient-text text-rendering-fix leading-tight">
                 Smart Learners.ai
               </span>
-              <span className="text-sm text-gray-500 -mt-1 text-rendering-fix">AI-Powered Learning</span>
+              <span className="text-xs text-gray-500 text-rendering-fix">AI-Powered Learning</span>
             </div>
           </Link>
           
@@ -98,7 +98,7 @@ const Navbar = () => {
               transition={{ delay: 0.8, duration: 0.5 }}
             >
               <Button size="sm" icon={<HiSparkles />} href="/get-started">
-                Get Started
+                Get Subscription
               </Button>
             </motion.div>
           </div>
@@ -125,7 +125,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200/50"
+            className="md:hidden bg-gradient-to-r from-purple-100/95 via-blue-100/95 to-pink-100/95 backdrop-blur-xl border-t-2 border-purple-300/40"
           >
             <div className="container-max py-6 space-y-4">
               {navLinks.map((link, index) => (

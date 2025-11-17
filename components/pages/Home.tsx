@@ -71,33 +71,47 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-10 pb-10 overflow-hidden">
+      <section className="relative pt-10 pb-4 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-100 via-blue-100 to-pink-100"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-sky-200/30 via-transparent to-indigo-200/30"></div>
           <div className="absolute inset-0 bg-mesh opacity-40"></div>
-          <motion.div 
-            className="absolute top-20 -left-20 w-96 h-96 bg-sky-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
-            animate={{ 
+          <motion.div
+            className="absolute top-20 -left-20 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+            animate={{
               x: [0, 100, 0],
               y: [0, -100, 0],
               scale: [1, 1.2, 1]
             }}
-            transition={{ 
+            transition={{
               duration: 20,
               repeat: Infinity,
               ease: "linear"
             }}
           />
-          <motion.div 
-            className="absolute top-40 -right-20 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
-            animate={{ 
+          <motion.div
+            className="absolute top-40 -right-20 w-96 h-96 bg-gradient-to-l from-blue-400 to-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+            animate={{
               x: [0, -100, 0],
               y: [0, 100, 0],
               scale: [1.2, 1, 1.2]
             }}
-            transition={{ 
+            transition={{
               duration: 25,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 left-1/2 w-96 h-96 bg-gradient-to-t from-sky-400 to-cyan-400 rounded-full mix-blend-multiply filter blur-xl opacity-25"
+            animate={{
+              x: [-50, 50, -50],
+              y: [0, -50, 0],
+              scale: [1, 1.1, 1]
+            }}
+            transition={{
+              duration: 30,
               repeat: Infinity,
               ease: "linear"
             }}
@@ -112,9 +126,9 @@ const Home = () => {
         >
           <div className="text-center">
             <motion.div variants={itemVariants}>
-              <motion.span 
-                className="inline-flex items-center px-4 py-2 bg-sky-100 text-sky-800 rounded-full text-sm font-medium mb-6 text-rendering-fix"
-                whileHover={{ scale: 1.05 }}
+              <motion.span
+                className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-medium mb-6 text-rendering-fix shadow-lg shadow-purple-500/30"
+                whileHover={{ scale: 1.05, shadow: "0 20px 40px rgba(168, 85, 247, 0.4)" }}
               >
                 <HiSparkles className="mr-2" />
                 Your Path to Smarter Learning - Designed & Developed by Orcalex Technologies
@@ -151,8 +165,10 @@ const Home = () => {
       </section>
       
       {/* Features Section */}
-      <section className="pt-0 pb-8 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative">
+      <section className="pt-0 pb-8 bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-mesh opacity-20"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-pink-300 to-purple-300 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-300 to-sky-300 rounded-full blur-3xl opacity-20"></div>
         <div className="container-max relative z-10">
           <motion.div 
             className="text-center mb-2"
@@ -161,7 +177,7 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 pt-20 mb-6 text-rendering-fix leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-rendering-fix leading-tight">
               Why Choose <span className="gradient-text">Smart Learners</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-rendering-fix">
@@ -213,8 +229,10 @@ const Home = () => {
       </section>
       
       {/* How It Works Section */}
-      <section className="py-12 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative">
+      <section className="py-12 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-mesh opacity-10"></div>
+        <div className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full blur-3xl opacity-15"></div>
+        <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-gradient-to-tr from-blue-300 to-indigo-300 rounded-full blur-3xl opacity-15"></div>
         <div className="container-max relative z-10">
           <motion.div 
             className="text-center mb-8"
