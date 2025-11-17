@@ -62,7 +62,7 @@ const Footer = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src="/logo.jpg"
+                  src="/logo.png"
                   alt="Smart Learners.ai Logo"
                   width={55}
                   height={55}

@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-16 bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -32,8 +32,8 @@ const About = () => {
       </section>
 
       {/* Our Story & What Makes Us Different - Side by Side */}
-      <section className="py-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative">
-        <div className="absolute inset-0 bg-mesh opacity-20"></div>
+      <section className="py-8 bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 relative">
+        <div className="absolute inset-0 bg-mesh opacity-15"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Our Story */}
@@ -57,21 +57,21 @@ const About = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 gap-3">
-                  <div className="flex items-center space-x-3 p-4 bg-purple-100 border border-purple-200 rounded-lg shadow-sm">
-                    <span className="text-purple-700 text-xl">🎯</span>
-                    <span className="text-gray-900 font-medium">Personalized guidance for each student</span>
+                  <div className="flex items-center space-x-3 p-5 bg-purple-500 border-2 border-purple-600 rounded-xl shadow-lg shadow-purple-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <span className="text-white text-2xl">🎯</span>
+                    <span className="text-white font-semibold">Personalized guidance for each student</span>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-blue-100 border border-blue-200 rounded-lg shadow-sm">
-                    <span className="text-blue-700 text-xl">⚡</span>
-                    <span className="text-gray-900 font-medium">Instant feedback on answers</span>
+                  <div className="flex items-center space-x-3 p-5 bg-blue-500 border-2 border-blue-600 rounded-xl shadow-lg shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <span className="text-white text-2xl">⚡</span>
+                    <span className="text-white font-semibold">Instant feedback on answers</span>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-green-100 border border-green-200 rounded-lg shadow-sm">
-                    <span className="text-green-700 text-xl">🔍</span>
-                    <span className="text-gray-900 font-medium">Targeted support to fix knowledge gaps</span>
+                  <div className="flex items-center space-x-3 p-5 bg-green-500 border-2 border-green-600 rounded-xl shadow-lg shadow-green-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <span className="text-white text-2xl">🔍</span>
+                    <span className="text-white font-semibold">Targeted support to fix knowledge gaps</span>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-yellow-100 border border-yellow-200 rounded-lg shadow-sm">
-                    <span className="text-yellow-700 text-xl">✨</span>
-                    <span className="text-gray-900 font-medium">Confidence to succeed</span>
+                  <div className="flex items-center space-x-3 p-5 bg-orange-500 border-2 border-orange-600 rounded-xl shadow-lg shadow-orange-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <span className="text-white text-2xl">✨</span>
+                    <span className="text-white font-semibold">Confidence to succeed</span>
                   </div>
                 </div>
                 
@@ -271,7 +271,7 @@ const About = () => {
               href="/contact" 
               icon={<FaArrowRight />}
             >
-              Get Started
+              Get Subscription
             </Button>
           </motion.div>
         </div>

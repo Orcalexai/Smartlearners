@@ -66,7 +66,7 @@ const Courses = () => {
   
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-8 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-8 bg-gradient-to-br from-purple-200 via-pink-200 to-orange-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -87,8 +87,10 @@ const Courses = () => {
       </section>
       
       
-      <section className="py-8 bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50 relative">
-        <div className="absolute inset-0 bg-mesh opacity-20"></div>
+      <section className="py-8 bg-gradient-to-br from-indigo-100 via-blue-100 to-cyan-100 relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh opacity-15"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-400 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             layout

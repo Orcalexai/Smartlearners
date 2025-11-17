@@ -85,11 +85,11 @@
   }
 
   .btn-primary {
-    @apply bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    @apply bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/50 transform hover:-translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply bg-white text-gray-900 border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50;
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg shadow-blue-500/40 hover:shadow-xl hover:shadow-blue-500/50 transform hover:-translate-y-0.5;
   }
 
   .btn-outline {
@@ -97,11 +97,11 @@
   }
 
   .card {
-    @apply bg-white rounded-2xl p-6 shadow-lg;
+    @apply bg-white rounded-2xl p-6 shadow-lg border-2 border-transparent;
   }
 
   .card-hover {
-    @apply hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1;
+    @apply hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-2 hover:border-purple-400;
   }
 
   .card-glass {
@@ -118,11 +118,44 @@
 
   .card-glow::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-sky-400/20 to-blue-400/20 opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-r from-purple-400/30 via-pink-400/30 to-blue-400/30 opacity-0 transition-opacity duration-300;
   }
 
   .card-glow:hover::before {
     @apply opacity-100;
+  }
+
+  /* Colorful card variations */
+  .card-purple {
+    @apply bg-purple-500 text-white shadow-xl shadow-purple-500/30;
+  }
+
+  .card-blue {
+    @apply bg-blue-500 text-white shadow-xl shadow-blue-500/30;
+  }
+
+  .card-green {
+    @apply bg-green-500 text-white shadow-xl shadow-green-500/30;
+  }
+
+  .card-orange {
+    @apply bg-orange-500 text-white shadow-xl shadow-orange-500/30;
+  }
+
+  .card-pink {
+    @apply bg-pink-500 text-white shadow-xl shadow-pink-500/30;
+  }
+
+  .card-indigo {
+    @apply bg-indigo-500 text-white shadow-xl shadow-indigo-500/30;
+  }
+
+  .card-teal {
+    @apply bg-teal-500 text-white shadow-xl shadow-teal-500/30;
+  }
+
+  .card-red {
+    @apply bg-red-500 text-white shadow-xl shadow-red-500/30;
   }
 }
 
